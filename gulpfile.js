@@ -8,7 +8,7 @@ var gulp = require("gulp")
 
 
 // uri
-var uri = './content/themes/buffaloheightsdistrict/';
+var uri = './content/themes/ahw/';
 
 var paths = {
 	scss: uri.concat('src/sass/**/*.scss'),
