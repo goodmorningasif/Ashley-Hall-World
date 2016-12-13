@@ -1,0 +1,29 @@
+{
+  "name": "Ashley-Hall-World",
+  "version": "1.0.0",
+  "description": "Ashley Hall World Microsite",
+  "main": "content/themes/ahw",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdco-partners/Ashley-Hall-World.git"
+  },
+  "author": "SDCO Partners",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdco-partners/Ashley-Hall-World/issues"
+  },
+  "homepage": "https://github.com/sdco-partners/Ashley-Hall-World#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1"
+  },
+  "dependencies": {}
+}
