@@ -1,21 +1,19 @@
 <?php
 /**
- * The header for ahw theme
+ * The header for our theme
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @link https://github.com/sdco-partners/Ashley-Hall-World
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage ahw
+ * @subpackage Twenty_Seventeen
  * @since 1.0
  * @version 1.0
  */
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
-
-<?php /* --> Begin Head */ ?>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +22,6 @@
 <?php wp_head(); ?>
 </head>
 
-<?php /*  -->Begin Body */ ?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
