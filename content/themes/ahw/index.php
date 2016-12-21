@@ -1,11 +1,8 @@
 <?php
-/**
- * The main template file
+/** 
+ * Index
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * The main template file
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -22,10 +19,50 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-    <h1>hello</h1>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+
+      <!-- ====  Block: Discovery Map  ==== -->
+      <!-- Benjamin's code goes here -->
+      <div id="discovery-map">
+	      <h2>Visit Our Full Site</h2>
+        <div id="discovery-map--logo">Logo</div>
+      </div>
+      
+      <!-- ====  Block: Blog Feed  ==== -->
+      <div id="blog-feed">
+        <h2>A Day In The Life</h2>
+
+        <div class="blog-feed--leftcol">
+          <img src="">
+          <h4>History</h4>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+					
+ 				<div class="blog-feed--rightcol">
+          <img src="">
+          <h4>History</h4>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+ 				</div>
+
+      </div>
+
+
+      <!-- ====  Block: Social Feed  ==== -->
+      <div id="social-feed">
+        <h2>Learn Like A Girl</h2>
+
+        <div class="social-feed--col">
+          <img src="">
+          <h4>History</h4>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </div>
+
+		</main>
+	</div>
+
+</div>
 
 <?php get_footer();

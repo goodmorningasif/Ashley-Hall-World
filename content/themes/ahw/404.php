@@ -1,11 +1,13 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * 404
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * Contans 404 assets.
  *
- * @package SDCOPartners
- * @subpackage awh
+ * @link https://github.com/sdco-partners/Ashley-Hall-World
+ *
+ * @package WordPress
+ * @subpackage ahw
  * @since 1.0
  * @version 1.0
  */
