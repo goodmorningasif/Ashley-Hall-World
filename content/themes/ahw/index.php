@@ -23,9 +23,11 @@ get_header(); ?>
       <!-- ====  Block: Discovery Map  ==== -->
       <!-- Benjamin's code goes here -->
       <div id="discovery-map">
-        <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
-        <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
-        <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
+        <div id="discovery-map--header">
+          <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
+          <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-main.svg"); ?></div>
+          <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
+        </div>
         <div id="discovery-map--logo">Logo</div>
       </div>
       

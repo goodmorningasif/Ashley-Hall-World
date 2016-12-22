@@ -46,33 +46,56 @@ table
 a, u 
   text-decoration: none
 
-@font-face
-  font-family: 'Gotham-SSm-A'
-  src: local('./../assets/Sweet-SweetSans-SC.otf')
-  src: url('./../assets/Sweet-SweetSans-SC.otf') format('opentype')
+/* VARIABLES, EXTENDS, FONTS and MIXINS */
+.font-cd-roman
+  font-family: "Chronicle Display A", "Chronicle Display B"
+  font-style: normal
+  font-weight: 400
 
-// @font-face
-//   font-family: 'sweet-sans-msc'
-//   src: local('./../assets/Sweet-SweetSans-MediumSC.otf')
-//   src: url('./../assets/Sweet-SweetSans-MediumSC.otf') format('opentype')
+.font-cd-italic
+  font-family: "Chronicle Display A", "Chronicle Display B"
+  font-style: italic
+  font-weight: 400
 
+.font-cd-bold
+  font-family: "Chronicle Display A", "Chronicle Display B"
+  font-style: normal
+  font-weight: 700
 
-/* VARIABLES, EXTENDS, & MIXINS */
-$font-sc: 'sweet-sans-sc', san-serif
-$font-msc: 'sweet-sans-msc', san-serif
+.font-cd-bolditalic
+  font-family: "Chronicle Display A", "Chronicle Display B"
+  font-style: italic
+  font-weight: 700
+
+.font-gss-book
+  font-family: "Gotham SSm A", "Gotham SSm B"
+  font-style: normal
+  font-weight: 400
+
+.font-gss-italic
+  font-family: "Gotham SSm A", "Gotham SSm B"
+  font-style: italic
+  font-weight: 400
+
+.font-gss-bold
+  font-family: "Gotham SSm A", "Gotham SSm B"
+  font-style: normal
+  font-weight: 700
+
+.font-gss-bolditalic
+  font-family: "Gotham SSm A", "Gotham SSm B"
+  font-style: italic
+  font-weight: 700
+
 
 $site-white: #fff
 $site-black: #000
 $site-grey: #414042
-$site-purple: ##371a57
+$site-purple: #371a57
 
 $break-large: 1200px
 $break-small: 450px
 
-=font($font)
-  font-family: $font
-  text-transform: uppercase
-  letter-spacing: 0.2em
 
 @import 'index' 
 
