@@ -19,23 +19,25 @@
 
   <h2>Headline Goes Here</h2>
   <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
-  <div>logo</div>
+  <div class='logo-footer'>
+    <?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?>
+  </div>
 
   <div id="footer--fineprint">
     <div id="footer--social">
       <ul>
         <li class="social" id="twit">
-          <a href="" alt="twitter">
+          <a href="https://www.facebook.com/ashleyhall.pqv" alt="twitter">
             <?php echo file_get_contents($GLOBALS['url']."/assets/twit.svg"); ?>
           </a>
         </li>
         <li class="social" id="face">
-          <a href="" alt="facebook">
+          <a href="https://twitter.com/ashleyhall_pqv" alt="facebook">
             <?php echo file_get_contents($GLOBALS['url']."/assets/face.svg"); ?>
           </a>
         </li>
         <li class="social" id="insta">
-          <a href="" alt="instagram">
+          <a href="https://instagram.com/ashleyhall_pqv/" alt="instagram">
             <?php echo file_get_contents($GLOBALS['url']."/assets/insta.svg"); ?>
           </a>
         </li>

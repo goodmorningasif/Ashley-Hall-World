@@ -23,7 +23,9 @@ get_header(); ?>
       <!-- ====  Block: Discovery Map  ==== -->
       <!-- Benjamin's code goes here -->
       <div id="discovery-map">
-	      <h2>Visit Our Full Site</h2>
+        <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
+        <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
+        <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
         <div id="discovery-map--logo">Logo</div>
       </div>
       
@@ -32,14 +34,18 @@ get_header(); ?>
         <h2>A Day In The Life</h2>
 
         <div class="blog-feed--leftcol">
-          <img src="">
+          <div class="image" id="lcol-0">
+            <?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?>
+          </div>
           <h4>History</h4>
           <h3>Mcbee Plaid</h3>
           <p>sedut perspiciatis unde omnis iste natus.</p>
         </div>
 					
  				<div class="blog-feed--rightcol">
-          <img src="">
+          <div class="image" id="rcol-0">
+            <?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?>
+          </div>
           <h4>History</h4>
           <h3>Mcbee Plaid</h3>
           <p>sedut perspiciatis unde omnis iste natus.</p>
@@ -53,7 +59,9 @@ get_header(); ?>
         <h2>Learn Like A Girl</h2>
 
         <div class="social-feed--col">
-          <img src="">
+          <div class="image" id="scol-0">
+            <?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?>
+          </div>
           <h4>History</h4>
           <h3>Mcbee Plaid</h3>
           <p>sedut perspiciatis unde omnis iste natus.</p>
