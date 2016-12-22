@@ -19,7 +19,7 @@
 
   <h2>Headline Goes Here</h2>
   <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
-  <div class='logo-footer'>
+  <div id='logo-footer'>
     <?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?>
   </div>
 

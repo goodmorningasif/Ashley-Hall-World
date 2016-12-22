@@ -47,47 +47,6 @@ a, u
   text-decoration: none
 
 /* VARIABLES, EXTENDS, FONTS and MIXINS */
-.font-cd-roman
-  font-family: "Chronicle Display A", "Chronicle Display B"
-  font-style: normal
-  font-weight: 400
-
-.font-cd-italic
-  font-family: "Chronicle Display A", "Chronicle Display B"
-  font-style: italic
-  font-weight: 400
-
-.font-cd-bold
-  font-family: "Chronicle Display A", "Chronicle Display B"
-  font-style: normal
-  font-weight: 700
-
-.font-cd-bolditalic
-  font-family: "Chronicle Display A", "Chronicle Display B"
-  font-style: italic
-  font-weight: 700
-
-.font-gss-book
-  font-family: "Gotham SSm A", "Gotham SSm B"
-  font-style: normal
-  font-weight: 400
-
-.font-gss-italic
-  font-family: "Gotham SSm A", "Gotham SSm B"
-  font-style: italic
-  font-weight: 400
-
-.font-gss-bold
-  font-family: "Gotham SSm A", "Gotham SSm B"
-  font-style: normal
-  font-weight: 700
-
-.font-gss-bolditalic
-  font-family: "Gotham SSm A", "Gotham SSm B"
-  font-style: italic
-  font-weight: 700
-
-
 $site-white: #fff
 $site-black: #000
 $site-grey: #414042
@@ -95,6 +54,47 @@ $site-purple: #371a57
 
 $break-large: 1200px
 $break-small: 450px
+
+.font-cd-roman, 
+.font-cd-italic, 
+.font-cd-bold, 
+.font-cd-bolditalic
+  font-family: "Chronicle Display A", "Chronicle Display B"
+  font-style: normal
+  font-weight: 400
+
+.font-cd-italic, 
+.font-cd-bolditalic
+  font-style: italic
+
+.font-cd-bold,
+.font-cd-bolditalic
+  font-weight: 700
+
+
+.font-gss-book,
+.font-gss-italic,
+.font-gss-bold,
+.font-gss-bolditalic
+  font-family: "Gotham SSm A", "Gotham SSm B"
+  font-style: normal
+  font-weight: 400
+
+.font-gss-italic, 
+.font-gss-bolditalic
+  font-style: italic
+
+.font-gss-bold, .font-gss-bolditalic
+  font-weight: 700
+
+
+.play-bttn
+  svg
+    width: 40px
+    .cls-1
+      fill: $site-white
+    path
+      fill: $site-black
 
 
 @import 'index' 
