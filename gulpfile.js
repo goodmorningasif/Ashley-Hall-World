@@ -11,8 +11,8 @@ var gulp = require("gulp")
 var uri = './content/themes/ahw/';
 
 var paths = {
-	scss: uri.concat('src/sass/**/*.scss'),
-	styles: uri.concat('src/sass/styles.scss'),
+	scss: uri.concat('src/sass/**/*.sass'),
+	styles: uri.concat('src/sass/styles.sass'),
 	js: uri.concat('src/js/**/*.js'),
 	modernizr: './modernizr.js',
 	src: uri.concat('src/js'),

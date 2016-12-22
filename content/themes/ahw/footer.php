@@ -24,11 +24,27 @@
   <div id="footer--fineprint">
     <div id="footer--social">
       <ul>
-        <li>Twit</li>
-        <li>Face</li>
-        <li>Insta</li>
-        <li>Ashley Hall</li>
-        <li>Contact</li>
+        <li class="social" id="twit">
+          <a href="" alt="twitter">
+            <?php echo file_get_contents($GLOBALS['url']."/assets/twit.svg"); ?>
+          </a>
+        </li>
+        <li class="social" id="face">
+          <a href="" alt="facebook">
+            <?php echo file_get_contents($GLOBALS['url']."/assets/face.svg"); ?>
+          </a>
+        </li>
+        <li class="social" id="insta">
+          <a href="" alt="instagram">
+            <?php echo file_get_contents($GLOBALS['url']."/assets/insta.svg"); ?>
+          </a>
+        </li>
+        <li class="contact">
+          Ashley Hall
+        </li>
+        <li class="contact">
+          Contact
+        </li>
       </ul>
     </div>
     <div id="footer--copyright">

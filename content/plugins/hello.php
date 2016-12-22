@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * @package Hello_Dolly
  * @version 1.6
@@ -80,3 +80,4 @@ function dolly_css() {
 add_action( 'admin_head', 'dolly_css' );
 
 ?>
+ -->
