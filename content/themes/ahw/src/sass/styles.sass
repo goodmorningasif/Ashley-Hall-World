@@ -47,6 +47,7 @@ a, u
   text-decoration: none
 
 /* VARIABLES, EXTENDS, FONTS and MIXINS */
+$site-bg: #F1F1F1
 $site-white: #fff
 $site-black: #000
 $site-grey: #414042
@@ -56,10 +57,10 @@ $break-large: 1200px
 $break-small: 450px
 
 $font-body: 16px
-$font-xs: 0.6em  
-$font-s: 0.8em  
-$font-l: 1.4em
-$font-xl: 1.8em
+$font-xs: 0.55em  
+$font-s: 0.9em  
+$font-l: 1.8em
+$font-xl: 2.6em
 
 .font-cd-roman, 
 .font-cd-italic, 
@@ -69,14 +70,10 @@ $font-xl: 1.8em
   font-style: normal
   font-weight: 400
 
-.font-cd-italic, 
-.font-cd-bolditalic
-  font-style: italic
-
-.font-cd-bold,
-.font-cd-bolditalic
-  font-weight: 700
-
+.font-tng-med
+  font-family: "Tungsten A", "Tungsten B"
+  font-style: normal
+  font-weight: 600
 
 .font-gss-book,
 .font-gss-italic,
@@ -86,14 +83,43 @@ $font-xl: 1.8em
   font-style: normal
   font-weight: 400
 
+.font-cd-italic, 
+.font-cd-bolditalic,
 .font-gss-italic, 
 .font-gss-bolditalic
   font-style: italic
 
-.font-gss-bold, .font-gss-bolditalic
+.font-gss-bold, 
+.font-gss-bolditalic,
+.font-cd-bold,
+.font-cd-bolditalic
   font-weight: 700
 
+
+
 /* COMMON ELEMENTS */
+h1
+
+h2
+  @extend .font-tng-med
+  color: $site-purple
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  font-size: $font-xl
+
+h3
+  @extend .font-gss-bold
+  color: $site-purple
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  margin: 20px 0 0 0
+  font-size: $font-s
+
+h4
+
+p
+  @extend .font-cd-roman
+
 .play-bttn
   svg
     width: 40px
@@ -101,31 +127,21 @@ $font-xl: 1.8em
       fill: $site-white
     path
       fill: $site-black
-h1
 
-h2
 
-h3
+.label
   @extend .font-gss-bold
   font-size: $font-xs
   text-transform: uppercase
+  letter-spacing: 0.1em
   color: $site-purple
   border-bottom: 3px solid $site-grey
-  width: 100%
-  padding: 0 0 5px 0
-
-h4
-  @extend .font-gss-bold
-  font-size: $font-l
-  text-transform: uppercase
-  color: $site-purple
-
-p
-  @extend .font-cd-roman
+  padding: 0 0 1px 0
 
 
 html 
   @extend .font-cd-roman
+  background-color: $site-bg
 
 body
  font-size: $font-body
