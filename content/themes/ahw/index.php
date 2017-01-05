@@ -36,30 +36,28 @@ get_header(); ?>
   <div id="feeds">
 
     <div id="feeds--blog-feed">
-      <div class="feeds--repeater">
-        <div class="feeds--lcol">
-          <div class="image" id="lcol-0">
-            <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-          </div>
-          <span class="label">Learn</span>
-          <h3>Headline Goes Here</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
+      <div class="feeds--lcol">
+        <div class="image" id="lcol-0">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>
-    			
-    		<div class="feeds--rcol">
-          <div class="image" id="rcol-0">
-            <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-          </div>
-          <span class="label">Play</span>
-          <h3>Headline Here</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-    		</div>
+        <span class="label">Learn</span>
+        <h3>Headline Goes Here</h3>
+        <p>sedut perspiciatis unde omnis iste natus.</p>
       </div>
+  			
+  		<div class="feeds--rcol">
+        <div class="image" id="rcol-0">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <span class="label">Play</span>
+        <h3>Headline Here</h3>
+        <p>sedut perspiciatis unde omnis iste natus.</p>
+  		</div>
     </div>
 
     <div id="feeds--social-feed">
       <h2>Learn Like A Girl</h2>
-      <div class="social-feed--col">
+      <div class="feeds--scol">
         <div class="image" id="scol-0">
           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>

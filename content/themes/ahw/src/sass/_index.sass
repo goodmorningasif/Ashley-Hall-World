@@ -1,7 +1,7 @@
 /*  _index.scss */
 
 .wrap
-  width: 900px
+  width: 1000px
   margin: 0 auto
 
 #discovery-map
@@ -40,37 +40,39 @@
 
 #feeds
   display: flex
-  justify-content: flex-start
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  width: 1000px
 
   #feeds--blog-feed
+	  display: flex
+	  justify-content: space-between
+	  align-items: flex-start
+	  flex-wrap: wrap
+	  width: calc(80% - 6px)
 
-	  .feeds--repeater
-		  display: flex
-		  justify-content: flex-start
-		  margin: 0 10px
+	  .feeds--lcol
+	    background-color: $site-white
+	    height: 360px
+	    width: calc(65% - 6px)
 
-		  .feeds--lcol
-		    flex: 2 1 100%
-		    background-color: $site-white
-		    height: 350px
-		    padding: 10px
-		    width: 350px
-		    margin: 5px
-		    order: 1
-
-		  .feeds--rcol
-			  @extend .feeds--lcol
-			  flex: 1 1 auto
-			  order: 2
+	  .feeds--rcol
+		  @extend .feeds--lcol
+		  width: calc(35% - 6px)
 
   #feeds--social-feed
+    width: calc(20% - 6px)
 
     h2
       font-size: $font-l
+      padding: 0 0 10px 0
+      border-bottom: 6px solid $site-grey
+
+    .feeds--scol
+      background-color: $site-white 
+      margin: 8px 0 8px 0 
     
-
-
-
 #footer
 
   #logo-footer
