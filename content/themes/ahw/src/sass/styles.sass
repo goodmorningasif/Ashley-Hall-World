@@ -50,10 +50,16 @@ a, u
 $site-white: #fff
 $site-black: #000
 $site-grey: #414042
-$site-purple: #371a57
+$site-purple: #6E5C7F
 
 $break-large: 1200px
 $break-small: 450px
+
+$font-body: 16px
+$font-xs: 0.6em  
+$font-s: 0.8em  
+$font-l: 1.4em
+$font-xl: 1.8em
 
 .font-cd-roman, 
 .font-cd-italic, 
@@ -87,7 +93,7 @@ $break-small: 450px
 .font-gss-bold, .font-gss-bolditalic
   font-weight: 700
 
-
+/* COMMON ELEMENTS */
 .play-bttn
   svg
     width: 40px
@@ -95,6 +101,34 @@ $break-small: 450px
       fill: $site-white
     path
       fill: $site-black
+h1
+
+h2
+
+h3
+  @extend .font-gss-bold
+  font-size: $font-xs
+  text-transform: uppercase
+  color: $site-purple
+  border-bottom: 3px solid $site-grey
+  width: 100%
+  padding: 0 0 5px 0
+
+h4
+  @extend .font-gss-bold
+  font-size: $font-l
+  text-transform: uppercase
+  color: $site-purple
+
+p
+  @extend .font-cd-roman
+
+
+html 
+  @extend .font-cd-roman
+
+body
+ font-size: $font-body
 
 
 @import 'index' 

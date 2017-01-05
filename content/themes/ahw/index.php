@@ -36,8 +36,8 @@ get_header(); ?>
       <div class="image" id="lcol-0">
         <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
       </div>
-      <h4>History</h4>
-      <h3>Mcbee Plaid</h3>
+      <h3>Learn</h3>
+      <h4>Headline Goes Here</h4>
       <p>sedut perspiciatis unde omnis iste natus.</p>
     </div>
 			
@@ -45,8 +45,8 @@ get_header(); ?>
       <div class="image" id="rcol-0">
         <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
       </div>
-      <h4>History</h4>
-      <h3>Mcbee Plaid</h3>
+      <h3>Play</h3>
+      <h4>Headline Here</h4>
       <p>sedut perspiciatis unde omnis iste natus.</p>
 			</div>
 
@@ -61,8 +61,8 @@ get_header(); ?>
       <div class="image" id="scol-0">
         <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
       </div>
-      <h4>History</h4>
-      <h3>Mcbee Plaid</h3>
+      <h3>History</h3>
+      <h4>Mcbee Plaid</h4>
       <p>sedut perspiciatis unde omnis iste natus.</p>
     </div>
   </div>
