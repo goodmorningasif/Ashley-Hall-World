@@ -19,7 +19,7 @@ get_header(); ?>
   <!-- ====  Section: Discovery Map  ==== -->
   <!-- Benjamin's code goes here -->
   <section id="discovery-map">
-    <header id="discovery-map--header">
+    <header>
       <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
       <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-main.svg"); ?></div>
       <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
