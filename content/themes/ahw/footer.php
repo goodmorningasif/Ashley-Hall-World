@@ -15,7 +15,7 @@
 ?>
 
 <!-- ====  Section: Footer  ==== -->
-<section id="footer">
+<footer id="footer">
   <header>
     <h2>Headline Goes Here</h2>
     <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
@@ -25,7 +25,7 @@
   </header> 
   
 
-  <div id="footer--fineprint">
+  <section id="footer--fineprint">
     <div id="footer--social">
       <ul>
         <li class="social" id="twit">
@@ -57,8 +57,8 @@
       </ul>
     </div>
 
-  </div>
-</section>
+  </section>
+</footer>
 
 </body><!-- end -->
 </html>

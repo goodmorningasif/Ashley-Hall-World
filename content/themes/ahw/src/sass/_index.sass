@@ -1,39 +1,58 @@
 /*  _index.scss */
 
-#wrap
-  width: 1000px
-  margin: 0 auto
-
-#discovery-map
+/* PAGE CONTEXT */
   
-	#discovery-map--header
-	  display: flex
-	  justify-content: space-between
+#discovery-map--header
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
 
-	  #corner-link
-	    flex: 0 0 auto
-	    svg
-		    width: 150px
-		    .cls-1
-		     fill: $site-white
-		    .cls-2
-		     fill: $site-grey
 
-	  #logo-main
-	    flex: 0 0 auto
-	    text-align: center
-	    padding: 100px 0 0 0 
-	    svg
-	      width: 400px
+#corner-link
+  flex: 0 0 auto
+  svg
+    width: 150px
+    .cls-1
+     fill: $site-white
+    .cls-2
+     fill: $site-grey
 
-	  #logo-seal
-	    flex: 0 0 auto
-	    svg 
-	      width: 100px
+#logo-main
+  flex: 0 0 auto
+  text-align: center
+  padding: 100px 0 0 0 
+  svg
+    width: 400px
+
+#logo-seal
+  flex: 0 0 auto
+  svg 
+    width: 100px
+
+
+/* OBJECTS */
+
+.play-bttn
+  svg
+    width: 40px
+    .cls-1
+      fill: $site-white
+    path
+      fill: $site-black
+
+.label
+  @extend .font-gss-bold
+  font-size: $font-xs
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  color: $site-purple
+  border-bottom: 3px solid $site-grey
+  padding: 0 0 1px 0
 
 
 #pre-feeds
-  h2
+  > h2
     text-align: center
     padding: 30px 0
  

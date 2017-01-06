@@ -97,7 +97,7 @@ $font-xl: 2.6em
 
 
 
-/* COMMON ELEMENTS */
+/* SITE CONTEXT*/
 h1
 
 h2
@@ -120,31 +120,17 @@ h4
 p
   @extend .font-cd-roman
 
-.play-bttn
-  svg
-    width: 40px
-    .cls-1
-      fill: $site-white
-    path
-      fill: $site-black
-
-
-.label
-  @extend .font-gss-bold
-  font-size: $font-xs
-  text-transform: uppercase
-  letter-spacing: 0.1em
-  color: $site-purple
-  border-bottom: 3px solid $site-grey
-  padding: 0 0 1px 0
-
 
 html 
   @extend .font-cd-roman
   background-color: $site-bg
 
 body
- font-size: $font-body
+  font-size: $font-body
+
+#wrap
+  width: 1000px
+  margin: 0 auto
 
 
 @import 'index' 

@@ -27,46 +27,52 @@ get_header(); ?>
     <!-- <div id="discovery-map--logo"></div> -->
   </section>
   
-  <!-- ====  Section: Feeds  ==== -->
+
   <header id="pre-feeds">
     <h2>A Day In The Life...</h2>
   </header>
 
+  <!-- ====  Section: Feeds  ==== -->
   <section id="feeds">
 
-    <div id="feeds--blog-feed">
-      <div class="feeds--lcol">
-        <div class="image" id="lcol-0">
+    <section id="feeds--blog-feed">
+
+      <article>
+        <div class="image">
           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>
         <span class="label">Learn</span>
         <h3>Headline Goes Here</h3>
         <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
+      </article>
   			
-  		<div class="feeds--rcol">
-        <div class="image" id="rcol-0">
+  		<article>
+        <div class="image">
           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>
         <span class="label">Play</span>
         <h3>Headline Here</h3>
         <p>sedut perspiciatis unde omnis iste natus.</p>
-  		</div>
-    </div>
+  		</article>
 
-    <div id="feeds--social-feed">
-      <h2>Learn Like A Girl</h2>
-      <div class="feeds--scol">
+    </section>
+
+    <section id="feeds--social-feed">
+      <header>
+        <h2>Learn Like A Girl</h2>
+      </header>
+
+      <article class="feeds--scol">
         <div class="image" id="scol-0">
           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>
         <span class="label">History</span>
         <h3>Mcbee Plaid</h3>
         <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-    </div>
-  </section>
+      </article>
 
+    </section>
+  </section>
 </div>
 
 <?php get_footer();
