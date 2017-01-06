@@ -60,12 +60,21 @@
 #feeds--social
   dispay: flex
   justify-content: space-between
-  aling-tiems: flex-start
+  align-items: flex-start
   flex-wrap: wrap
 
   > article
     flex: 0 0 auto
     margin: 8px 0 8px 0
+
+.image
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: no-wrap
+
+  .play-bttn
+    flex: 0 0 auto
 
 /**/
 
@@ -154,11 +163,11 @@ footer
   height: 260px
 
 .play-bttn
-  position: relative
-  top: calc(50% - 20px)
-  left: calc(50% - 20px)
-
-
+  &:hover
+    .cls-1
+      fill: $site-purple
+    path
+      fill: $site-white 
 
 
 #feeds--social
