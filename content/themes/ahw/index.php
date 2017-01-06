@@ -38,7 +38,7 @@ get_header(); ?>
     <section id="feeds--blog">
 
       <article>
-        <div class="image">
+        <div class="image" id="blog-01">
           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>
         <span class="label">Learn</span>
@@ -47,7 +47,7 @@ get_header(); ?>
       </article>
   			
   		<article>
-        <div class="image">
+        <div class="image" id="blog-02">
           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
         </div>
         <span class="label">Play</span>
