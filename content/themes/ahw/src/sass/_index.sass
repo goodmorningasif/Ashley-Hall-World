@@ -2,6 +2,7 @@
 
 
 /* PAGE CONTEXT */
+/* For positioning items */
 
 #discovery-map  
   header
@@ -49,6 +50,7 @@
 
   > article
     height: 430px
+    padding: 10px
 
     .content
       padding: 10px 40px 0 40px 
@@ -60,9 +62,6 @@
     flex: 0 0 280px
     margin: 0 0 0 15px
 
-
-
-
 #feeds--social
   dispay: flex
   justify-content: space-between
@@ -72,12 +71,12 @@
   > article
     flex: 0 0 auto
     margin: 8px 0 8px 0
+    padding: 10px
 
     .content
-      padding: 0 20px
+      padding: 10px 10px 0 20px
 
 .content
- 
   p 
     padding: 10px 0 30px 0 
 
@@ -87,13 +86,11 @@
   display: flex
   justify-content: center
   align-items: center
-  flex-wrap: no-wrap
+  flex-wrap: nowrap
 
   .play-bttn
     flex: 0 0 auto
     width: 50px
-
-
 
 /**/
 
@@ -133,10 +130,10 @@ footer
 
 
 /* OBJECTS */
+/* For styling objects */
 
 .play-bttn
   svg
-    
     .cls-1
       fill: $site-white
     path
@@ -172,14 +169,17 @@ footer
 #blog-01
   background: #fff url("./../assets/img-01.jpg") no-repeat center
   background-size: cover
-  margin: 10px
   height: 260px
 
 #blog-02
   background: #fff url("./../assets/img-02.jpg") no-repeat center
   background-size: cover
-  margin: 10px
   height: 260px
+
+#soc-01
+  background: #fff url("./../assets/img-03.jpg") no-repeat center
+  background-size: cover
+  height: 180px
 
 .play-bttn
   &:hover

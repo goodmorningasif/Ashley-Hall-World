@@ -66,9 +66,9 @@ get_header(); ?>
         <h2>Learn Like A Girl</h2>
       </header>
 
-      <article class="feeds--scol">
-        <div class="image" id="scol-0">
-          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+      <article>
+        <div class="image" id="soc-01">
+<!--           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div> -->
         </div>
         <div class="content">
           <span class="label">History</span>
