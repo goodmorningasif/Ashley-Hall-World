@@ -35,7 +35,7 @@ get_header(); ?>
   <!-- ====  Section: Feeds  ==== -->
   <section id="feeds">
 
-    <section id="blog-feed">
+    <section id="feeds--blog">
 
       <article>
         <div class="image">
@@ -57,7 +57,7 @@ get_header(); ?>
 
     </section>
 
-    <section id="social-feed">
+    <section id="feeds--social">
       <header>
         <h2>Learn Like A Girl</h2>
       </header>

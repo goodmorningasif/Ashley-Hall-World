@@ -15,7 +15,7 @@
 ?>
 
 <!-- ====  Section: Footer  ==== -->
-<footer id="footer">
+<footer>
   <header>
     <h2>Headline Goes Here</h2>
     <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
