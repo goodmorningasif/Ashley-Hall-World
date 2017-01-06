@@ -14,26 +14,25 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div id="wrap">
 
-
-  <!-- ====  Block: Discovery Map  ==== -->
+  <!-- ====  Section: Discovery Map  ==== -->
   <!-- Benjamin's code goes here -->
-  <div id="discovery-map">
-    <div id="discovery-map--header">
+  <section id="discovery-map">
+    <header id="discovery-map--header">
       <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
       <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-main.svg"); ?></div>
       <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
-    </div>
-    <div id="discovery-map--logo"></div>
-  </div>
+    </header>
+    <!-- <div id="discovery-map--logo"></div> -->
+  </section>
   
-  <!-- ====  Block: Feeds  ==== -->
-  <div id="pre-feeds">
+  <!-- ====  Section: Feeds  ==== -->
+  <header id="pre-feeds">
     <h2>A Day In The Life...</h2>
-  </div>
+  </header>
 
-  <div id="feeds">
+  <section id="feeds">
 
     <div id="feeds--blog-feed">
       <div class="feeds--lcol">
@@ -66,7 +65,7 @@ get_header(); ?>
         <p>sedut perspiciatis unde omnis iste natus.</p>
       </div>
     </div>
-  </div>
+  </section>
 
 </div>
 

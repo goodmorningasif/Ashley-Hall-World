@@ -14,14 +14,16 @@
 
 ?>
 
-<!-- ====  Block: Footer  ==== -->
-<div id="footer">
-
-  <h2>Headline Goes Here</h2>
-  <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
-  <div id='logo-footer'>
-    <?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?>
-  </div>
+<!-- ====  Section: Footer  ==== -->
+<section id="footer">
+  <header>
+    <h2>Headline Goes Here</h2>
+    <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
+    <div id='logo-footer'>
+      <?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?>
+    </div>
+  </header> 
+  
 
   <div id="footer--fineprint">
     <div id="footer--social">
@@ -56,7 +58,7 @@
     </div>
 
   </div>
-</div>
+</section>
 
 </body><!-- end -->
 </html>
