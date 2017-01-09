@@ -18,7 +18,7 @@
 <footer>
   <header>
     <h2>Headline Goes Here</h2>
-    <p>Curabitur tempor tortor nec dapibus lobortis. Sed maximus ipsum vestibulum odio luctus sodales. Vivamus sodales finibus metus ut molestie.</p>
+    <p>sed ut perspiciatis unde omnis iste natus errpr sit volupatetem accusantium doloremque laudantium, totam rem aperiam. sed ut perspiciatis unde omnis iste natus errpr sit volupatetem accusantium doloremque laudantium, totam rem aperiam.</p>
     <div id='logo-footer'>
       <?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?>
     </div>

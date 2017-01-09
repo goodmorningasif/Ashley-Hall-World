@@ -56,9 +56,12 @@ $site-purple: #6E5C7F
 $break-large: 1200px
 $break-small: 450px
 
-$font-body: 16px
 $font-xs: 0.55em  
-$font-s: 0.9em  
+$font-ms: 0.75em 
+$font-s: 0.9em
+$font-body: 16px
+$font-m: 1.2em  
+$font-ml: 1.4em  
 $font-l: 1.8em
 $font-xl: 2.6em
 
@@ -119,7 +122,9 @@ h4
 
 p
   @extend .font-cd-roman
-
+  font-size: $font-s
+  color: $site-grey
+  line-height: 1.4em
 
 html 
   @extend .font-cd-roman
@@ -134,5 +139,7 @@ body
 
 
 @import 'index' 
+
+@import 'footer'
 
 
