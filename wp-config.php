@@ -91,7 +91,7 @@ if (!defined('WP_SITEURL')) {
 	define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/ashley-hall-world/wordpress');
 }
 if (!defined('WP_HOME')) {
-	define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME'] . '');
+	define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME'] . '/ashley-hall-world');
 }
 if (!defined('WP_CONTENT_DIR')) {
 	define('WP_CONTENT_DIR', dirname(__FILE__) . '/content');
