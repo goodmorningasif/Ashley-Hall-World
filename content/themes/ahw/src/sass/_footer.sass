@@ -3,29 +3,10 @@
 /* PAGE CONTEXT */
 /* For positioning items */
 
-#logo-footer
-  width: 250px
-  margin: auto
-
-#footer--fineprint
-  padding: 50px
-
-#footer--social
-
-  > ul li 
-    display: inline-block
-    padding-right: 20px
-
-    svg 
-      height: 20px 
-
-#footer--copyright
-
-  > ul li 
-    display: inline-block
-    margin: 5px
-
 footer
+  margin: 0 50px
+  padding-top: 50px
+  padding-bottom: 50px
 
   header
     text-align: center
@@ -42,6 +23,28 @@ footer
     #footer--copyright
       flex: 0 0 auto
 
+
+
+#logo-footer
+  width: 250px
+  margin: auto
+
+#footer--social
+
+  > ul li 
+    display: inline-block
+    padding-right: 20px
+
+    svg 
+      height: 20px 
+
+#footer--copyright
+
+  > ul li 
+    display: inline-block
+    margin: 5px
+
+
 .contact
   vertical-align: top
   margin-top: 5px
@@ -52,6 +55,7 @@ footer
 /* For styling objects */
 
 footer
+  border-top: 1px solid $site-grey
 
   header
 
@@ -68,10 +72,9 @@ footer
 #footer--fineprint
   @extend .font-gss-bold
   color: $site-grey
-  font-size: $font-ms
+  font-size: $font-footer
   text-transform: uppercase
   letter-spacing: 0.1em
-
 
 .contact 
   border-left: 2px solid $site-grey
