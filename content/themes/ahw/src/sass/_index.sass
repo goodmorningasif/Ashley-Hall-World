@@ -78,13 +78,16 @@
   align-items: flex-start
   flex-wrap: wrap
 
+  > header
+    margin-bottom: 5px
+
   > article
     flex: 0 0 calc(100% - 20px)
     margin: 8px 0 8px 0
     padding: 10px
 
     .content
-      padding: 10px 10px 0 20px
+      padding: 10px 10px 0 10px
 
 /* Play Button Centering */
 .image
@@ -151,8 +154,12 @@
     > h2
       font-size: $font-l
 
-.content
-  > h3
+
+#feeds--social
+  h3
+    font-size: $font-ms
+
+  p 
     font-size: $font-ms
 
 
