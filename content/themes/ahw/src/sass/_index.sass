@@ -36,11 +36,11 @@
   flex-wrap: wrap
 
   > section:nth-child(1)
-    flex: 1 0 840px
+    flex: 1 0 825px
     margin: 0 15px 0 0
 
   > section:nth-child(2)
-    flex: 0 0 160px
+    flex: 0 0 140px
 
 #feeds--blog
   display: flex
@@ -60,7 +60,10 @@
 
   > article:nth-child(even)
     flex: 0 0 280px
-    margin: 0 15px
+    margin: 0 0 0 15px
+
+  > article:nth-child(n+3)
+    margin-top: 15px
 
 #feeds--social
   display: flex
@@ -69,17 +72,12 @@
   flex-wrap: wrap
 
   > article
-    flex: 0 0 auto
+    flex: 0 0 100%
     margin: 8px 0 8px 0
     padding: 10px
 
     .content
       padding: 10px 10px 0 20px
-
-.content
-  p 
-    padding: 10px 0 30px 0 
-
 
 
 .image
@@ -91,6 +89,10 @@
   .play-bttn
     flex: 0 0 auto
     width: 50px
+
+.content
+  p 
+    padding: 10px 0 30px 0 
 
 /**/
 
@@ -179,7 +181,7 @@ footer
 #soc-01
   background: #fff url("./../assets/img-03.jpg") no-repeat center
   background-size: cover
-  height: 180px
+  height: 130px
 
 .play-bttn
   &:hover
