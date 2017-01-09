@@ -1,6 +1,6 @@
 <?php
 
-	/* Define Variables */
+	/* Define Variables  */
 	$GLOBALS['url'] = get_template_directory_uri();
 
 
