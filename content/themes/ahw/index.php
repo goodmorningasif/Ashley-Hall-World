@@ -59,6 +59,28 @@ get_header(); ?>
         </div>
   		</article>
 
+     <article>
+        <div class="image" id="blog-01">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <div class="content">
+          <span class="label">Learn</span>
+          <h3>Headline Goes Here</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
+        
+      <article>
+        <div class="image" id="blog-02">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <div class="content">
+          <span class="label">Play</span>
+          <h3>Headline Here</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
+
     </section>
 
     <section id="feeds--social">
@@ -68,7 +90,16 @@ get_header(); ?>
 
       <article>
         <div class="image" id="soc-01">
-<!--           <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div> -->
+        </div>
+        <div class="content">
+          <span class="label">History</span>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
+
+      <article>
+        <div class="image" id="soc-01">
         </div>
         <div class="content">
           <span class="label">History</span>

@@ -36,7 +36,7 @@
   flex-wrap: wrap
 
   > section:nth-child(1)
-    flex: 1 0 auto
+    flex: 1 0 840px
     margin: 0 15px 0 0
 
   > section:nth-child(2)
@@ -55,15 +55,15 @@
     .content
       padding: 10px 40px 0 40px 
   
-  > article:nth-child(1)
+  > article:nth-child(odd)
     flex: 1 0 auto
 
-  > article:nth-child(2)
+  > article:nth-child(even)
     flex: 0 0 280px
-    margin: 0 0 0 15px
+    margin: 0 15px
 
 #feeds--social
-  dispay: flex
+  display: flex
   justify-content: space-between
   align-items: flex-start
   flex-wrap: wrap
