@@ -26,7 +26,6 @@ get_header(); ?>
     <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-main.svg"); ?></div>
     <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
   </header>
-  <!-- <div id="discovery-map--logo"></div> -->
 </section>
 
 
@@ -37,9 +36,12 @@ get_header(); ?>
 <!-- ====  Section: Feeds  ==== -->
 <section id="feeds">
 
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+
   <section id="feeds--blog">
 
-    <article>
+    <!-- <article>
       <div class="image" id="blog-01">
         <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
       </div>
@@ -81,11 +83,11 @@ get_header(); ?>
         <h3>Headline Here</h3>
         <p>sedut perspiciatis unde omnis iste natus.</p>
       </div>
-    </article>
+    </article> -->
 
   </section>
 
-  <section id="feeds--social">
+<!--   <section id="feeds--social">
     <header>
       <h2>Learn Like A Girl</h2>
     </header>
@@ -108,9 +110,15 @@ get_header(); ?>
         <h3>Mcbee Plaid</h3>
         <p>sedut perspiciatis unde omnis iste natus.</p>
       </div>
-    </article>
+    </article> -->
 
   </section>
+  
+  <?php endwhile; else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
+  <?php endif; ?>
+
+
 </section>
 
 <?php get_footer();
