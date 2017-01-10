@@ -36,14 +36,34 @@ get_header(); ?>
 <!-- ====  Section: Feeds  ==== -->
 <section id="feeds">
 
-  <!-- ====  The Looop  ==== -->
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
+  
   <?php
-    echo "<script>console.log('".get_field('feed_selection').' '.'xxx'."');</script>";
+    /** 
+    * The Loop => for Main Feed
+    */ 
+    if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+
+
+    /** 
+    * Variables 
+    */
+
+    $feed = get_field('feed_selection');     
+    
+    /**
+    *  Console Logs
+    * 
+    * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
+    * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
+    */
+    echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
   ?>
 
+
     <section id="feeds--blog">
+      
+      
+
 
       <!-- <article>
         <div class="image" id="blog-01">
@@ -90,6 +110,10 @@ get_header(); ?>
       </article> -->
 
     </section>
+
+  <?php endwhile; else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
+  <?php endif; /* End Loop */ ?> 
    
     <section id="feeds--social">
 
@@ -119,9 +143,6 @@ get_header(); ?>
 
     </section>
   
-  <?php endwhile; else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
-  <?php endif; ?> <!-- End Loop -->
 
 
 </section>
