@@ -43,8 +43,11 @@ get_header(); ?>
       /** 
       * the Loop => for Main Feed
       */ 
-      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+      
+      $count = 0;
 
+      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+      $count++;
 
       /** 
       * Variables 
@@ -75,7 +78,14 @@ get_header(); ?>
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
-              <?php the_content(); ?>
+              <p>
+                <?php if ( $count%2 === 0 ) { 
+                    echo wp_trim_words(get_the_content(), 40, '...'); 
+                  } else {
+                    echo wp_trim_words(get_the_content(), 10, '...'); 
+                  }
+                ?>
+              </p>
             </div>
           </article>
         <?php } ?>
