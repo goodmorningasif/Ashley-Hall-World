@@ -38,7 +38,7 @@ get_header(); ?>
 
   
   <section id="feeds--blog">
-  
+
     <?php
       /** 
       * the Loop => for Main Feed
@@ -54,8 +54,6 @@ get_header(); ?>
       $type = get_field('post_type') ?: '';
       $subtitle = get_field('subtitle') ?: '';
       $link = get_field('click-through_link') ?: '';
-      $title = get_the_title() ?: '';
-      $content = get_the_content() ?: '';
       $image = '' ?: ''
       
       /**
@@ -76,8 +74,8 @@ get_header(); ?>
             </div>
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
-              <h3><?php $title; ?></h3>
-              <p><?php $content; ?></p>
+              <h3><?php the_title(); ?></h3>
+              <?php the_content(); ?>
             </div>
           </article>
         <?php } ?>
@@ -86,57 +84,14 @@ get_header(); ?>
 
 
 
-      <!-- <article>
-        <div class="image" id="blog-01">
-          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-        </div>
-        <div class="content">
-          <span class="label">Learn</span>
-          <h3>Headline Goes Here</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-        </div>
-      </article>
-  			
-  		<article>
-        <div class="image" id="blog-02">
-          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-        </div>
-        <div class="content">
-          <span class="label">Play</span>
-          <h3>Headline Here</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-        </div>
-  		</article>
 
-     <article>
-        <div class="image" id="blog-01">
-          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-        </div>
-        <div class="content">
-          <span class="label">Learn</span>
-          <h3>Headline Goes Here</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-        </div>
-      </article>
-        
-      <article>
-        <div class="image" id="blog-02">
-          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-        </div>
-        <div class="content">
-          <span class="label">Play</span>
-          <h3>Headline Here</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-        </div>
-      </article> -->
-
-    </section>
-
-  <?php endwhile; else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
-  <?php endif; /* End Loop */ ?> 
+    <?php endwhile; else : ?>
+      <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
+    <?php endif; /* End Loop */ ?> 
    
-    <section id="feeds--social">
+  </section>
+
+  <section id="feeds--social">
 
    <!--    <header>
         <h2>Learn Like A Girl</h2>
