@@ -37,32 +37,53 @@ get_header(); ?>
 <section id="feeds">
 
   
-  <?php
-    /** 
-    * The Loop => for Main Feed
-    */ 
-    if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+  <section id="feeds--blog">
+  
+    <?php
+      /** 
+      * the Loop => for Main Feed
+      */ 
+      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 
 
-    /** 
-    * Variables 
-    */
+      /** 
+      * Variables 
+      */
 
-    $feed = get_field('feed_selection');     
-    
-    /**
-    *  Console Logs
-    * 
-    * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
-    * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
-    */
-    echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
-  ?>
-
-
-    <section id="feeds--blog">
+      $feed = get_field('feed_selection') ?: '';
+      $type = get_field('post_type') ?: '';
+      $subtitle = get_field('subtitle') ?: '';
+      $link = get_field('click-through_link') ?: '';
+      $title = get_the_title() ?: '';
+      $content = get_the_content() ?: '';
+      $image = '' ?: ''
       
+      /**
+      *  Console Logs
+      * 
+      * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
+      * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
+      */
+    ?>
+
+
       
+      <?php if ($feed === 'Main Feed'){ ?>
+
+        <?php if ($type === 'Image') { ?> 
+          <article>
+            <div class="image" id="blog-02">
+            </div>
+            <div class="content">
+              <span class="label"><?php $subtitle; ?></span>
+              <h3><?php $title; ?></h3>
+              <p><?php $content; ?></p>
+            </div>
+          </article>
+        <?php } ?>
+
+      <?php } ?>
+
 
 
       <!-- <article>
