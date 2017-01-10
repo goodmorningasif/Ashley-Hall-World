@@ -86,9 +86,10 @@ get_header(); ?>
     </article> -->
 
   </section>
-
-<!--   <section id="feeds--social">
-    <header>
+ 
+  <section id="feeds--social">
+  
+ <!--    <header>
       <h2>Learn Like A Girl</h2>
     </header>
 
