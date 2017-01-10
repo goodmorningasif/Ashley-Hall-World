@@ -36,88 +36,92 @@ get_header(); ?>
 <!-- ====  Section: Feeds  ==== -->
 <section id="feeds">
 
+  <!-- ====  The Looop  ==== -->
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+  <?php
+    echo "<script>console.log('".get_field('feed_selection').' '.'xxx'."');</script>";
+  ?>
 
-  <section id="feeds--blog">
+    <section id="feeds--blog">
 
-    <!-- <article>
-      <div class="image" id="blog-01">
-        <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-      </div>
-      <div class="content">
-        <span class="label">Learn</span>
-        <h3>Headline Goes Here</h3>
-        <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-    </article>
-			
-		<article>
-      <div class="image" id="blog-02">
-        <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-      </div>
-      <div class="content">
-        <span class="label">Play</span>
-        <h3>Headline Here</h3>
-        <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-		</article>
+      <!-- <article>
+        <div class="image" id="blog-01">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <div class="content">
+          <span class="label">Learn</span>
+          <h3>Headline Goes Here</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
+  			
+  		<article>
+        <div class="image" id="blog-02">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <div class="content">
+          <span class="label">Play</span>
+          <h3>Headline Here</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+  		</article>
 
-   <article>
-      <div class="image" id="blog-01">
-        <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-      </div>
-      <div class="content">
-        <span class="label">Learn</span>
-        <h3>Headline Goes Here</h3>
-        <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-    </article>
-      
-    <article>
-      <div class="image" id="blog-02">
-        <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
-      </div>
-      <div class="content">
-        <span class="label">Play</span>
-        <h3>Headline Here</h3>
-        <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-    </article> -->
+     <article>
+        <div class="image" id="blog-01">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <div class="content">
+          <span class="label">Learn</span>
+          <h3>Headline Goes Here</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
+        
+      <article>
+        <div class="image" id="blog-02">
+          <div class="play-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/play-bttn.svg"); ?></div>
+        </div>
+        <div class="content">
+          <span class="label">Play</span>
+          <h3>Headline Here</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article> -->
 
-  </section>
- 
-  <section id="feeds--social">
-  
- <!--    <header>
-      <h2>Learn Like A Girl</h2>
-    </header>
+    </section>
+   
+    <section id="feeds--social">
 
-    <article>
-      <div class="image" id="soc-01">
-      </div>
-      <div class="content">
-        <span class="label">History</span>
-        <h3>Mcbee Plaid</h3>
-        <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-    </article>
+   <!--    <header>
+        <h2>Learn Like A Girl</h2>
+      </header>
 
-    <article>
-      <div class="image" id="soc-01">
-      </div>
-      <div class="content">
-        <span class="label">History</span>
-        <h3>Mcbee Plaid</h3>
-        <p>sedut perspiciatis unde omnis iste natus.</p>
-      </div>
-    </article> -->
+      <article>
+        <div class="image" id="soc-01">
+        </div>
+        <div class="content">
+          <span class="label">History</span>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
 
-  </section>
+      <article>
+        <div class="image" id="soc-01">
+        </div>
+        <div class="content">
+          <span class="label">History</span>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article> -->
+
+    </section>
   
   <?php endwhile; else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
-  <?php endif; ?>
+  <?php endif; ?> <!-- End Loop -->
 
 
 </section>
