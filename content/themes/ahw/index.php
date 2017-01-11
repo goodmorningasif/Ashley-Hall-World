@@ -81,19 +81,19 @@ get_header(); ?>
             <div class="image" id="blog-<?php echo $count; ?>" 
             style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
             <div class="content">
-              <span class="label"><?php $subtitle; ?></span>
+              <span class="label"><?php echo $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
               <?php if ( $count%2 === 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
               <?php } ?>
             </div>
           </article>
 
         <?php } else if($type === 'Quote') { ?>
-         <!--  <article>
-            <div class="image" id="blog-02">
+<!--          <article>
+            <div class="quote" id="blog-<?php echo $count; ?>">
             </div>
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
@@ -101,7 +101,7 @@ get_header(); ?>
               <?php if ( $count%2 === 0 ) { 
                   echo '<p>'.wp_trim_words(get_the_content(), 40, '...').'</p>'; 
                 } else {
-                  echo '<p>'.wp_trim_words(get_the_content(), 10, '...').'</p>'; 
+                  echo '<p>'.wp_trim_words(get_the_content(), 5, '...').'</p>'; 
                 } ?>
             </div>
           </article> -->
