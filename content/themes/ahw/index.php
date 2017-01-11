@@ -57,22 +57,29 @@ get_header(); ?>
       $type = get_field('post_type') ?: '';
       $subtitle = get_field('subtitle') ?: '';
       $link = get_field('click-through_link') ?: '';
-      $image = '' ?: ''
+      $image = get_field('image_upload') ?: '';
+      // $video = the_field('video_link') ?: '';
       
       /**
       *  Console Logs
       * 
       * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
       * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
+      * echo '<pre>';
+      * print_r($image);
+      * echo '</pre>';
       */
+      // echo "<script>console.log('".$video.", outputs video obj');</script>"; 
     ?>
       
-      <?php if ($feed === 'Main Feed'){ ?>
+      <?php 
+        if ($feed === 'Main Feed'){ 
+      ?>
 
         <?php if ($type === 'Image') { ?> 
           <article>
             <div class="image" id="blog-<?php echo $count; ?>" 
-            style="background: #fff url('<?php echo $GLOBALS['url']; ?>/assets/img-01.jpg') no-repeat center; background-size: cover"></div>
+            style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
