@@ -71,8 +71,8 @@ get_header(); ?>
 
         <?php if ($type === 'Image') { ?> 
           <article>
-            <div class="image" id="blog-<?php echo $count; ?>" style="">
-            </div>
+            <div class="image" id="blog-<?php echo $count; ?>" 
+            style="background: #fff url('<?php echo $GLOBALS['url']; ?>/assets/img-01.jpg') no-repeat center; background-size: cover"></div>
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
