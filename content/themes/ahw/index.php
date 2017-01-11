@@ -77,13 +77,13 @@ get_header(); ?>
       ?>
 
         <?php if ($type === 'Image') { ?> 
-          <article>
+          <article class="image-post">
             <div class="image" id="blog-<?php echo $count; ?>" 
             style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
-              <?php if ( $count%2 === 0 ) { ?>
+              <?php if ( $count%2 !== 0 ) { ?>
                 <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
               <?php } else { ?>
                 <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
@@ -92,19 +92,17 @@ get_header(); ?>
           </article>
 
         <?php } else if($type === 'Quote') { ?>
-<!--          <article>
-            <div class="quote" id="blog-<?php echo $count; ?>">
-            </div>
+          <article class="quote-post">
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
-              <?php if ( $count%2 === 0 ) { 
-                  echo '<p>'.wp_trim_words(get_the_content(), 40, '...').'</p>'; 
-                } else {
-                  echo '<p>'.wp_trim_words(get_the_content(), 5, '...').'</p>'; 
-                } ?>
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo get_the_content(); ?></p>
+              <?php } else { ?>
+                <p><?php echo get_the_content(); ?></p>
+              <?php } ?>
             </div>
-          </article> -->
+          </article>
         <?php } else if($type === 'Video') { ?>
 
         <?php } ?>

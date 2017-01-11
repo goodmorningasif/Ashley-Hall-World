@@ -142,9 +142,27 @@
     text-align: center
     padding: 30px 0
 
-#feeds
-  article
-    background-color: $site-white
+
+.image-post
+  background-color: $site-white
+
+.quote-post
+  background-color: $site-litePurple
+
+  > .content
+    text-align: center
+
+    p 
+      @extend .font-tng-med
+      font-size: $font-l
+      letter-spacing: 0.1em
+      line-height: 1em
+      text-transform: uppercase
+      color: $site-purple 
+      width: 350px
+      margin: 0 auto
+
+    
 
 #feeds--blog
 
