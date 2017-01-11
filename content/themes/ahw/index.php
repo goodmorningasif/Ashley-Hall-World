@@ -58,6 +58,8 @@ get_header(); ?>
       $subtitle = get_field('subtitle') ?: '';
       $link = get_field('click-through_link') ?: '';
       $image = get_field('image_upload') ?: '';
+      $click_through = get_field('click-through_link');
+      $cta = get_field('quote_cta');
       // $video = the_field('video_link') ?: '';
       
       /**
@@ -68,8 +70,9 @@ get_header(); ?>
       * echo '<pre>';
       * print_r($image);
       * echo '</pre>';
-      */
-      // echo "<script>console.log('".$video.", outputs video obj');</script>"; 
+      * echo "<script>console.log('".$video.", outputs video obj');</script>"; 
+      */ 
+      echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
     ?>
       
       <?php 
@@ -77,8 +80,8 @@ get_header(); ?>
       ?>
 
         <?php if ($type === 'Image') { ?> 
-          <article class="image-post">
-            <div class="image" id="blog-<?php echo $count; ?>" 
+          <article class="image-post" id="blog-<?php echo $count; ?>">
+            <div class="image"  
             style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
@@ -92,15 +95,19 @@ get_header(); ?>
           </article>
 
         <?php } else if($type === 'Quote') { ?>
-          <article class="quote-post">
+          <article class="quote-post" id="blog-<?php echo $count; ?>">
             <div class="content">
-              <span class="label"><?php $subtitle; ?></span>
-              <h3><?php the_title(); ?></h3>
+              <span class="label"><?php echo $subtitle; ?></span>
               <?php if ( $count%2 !== 0 ) { ?>
                 <p><?php echo get_the_content(); ?></p>
               <?php } else { ?>
                 <p><?php echo get_the_content(); ?></p>
               <?php } ?>
+              <span class="cta">
+                <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
+                  <?php echo $cta; ?>
+                </a>
+              </span>
             </div>
           </article>
         <?php } else if($type === 'Video') { ?>
