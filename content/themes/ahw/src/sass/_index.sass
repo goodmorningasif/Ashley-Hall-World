@@ -105,6 +105,23 @@
   p 
     padding: 10px 0 30px 0 
 
+.video
+  position: relative;
+  padding-bottom: 56.25%
+  height: 0
+  overflow: hidden
+  max-width: 100%
+  height: auto
+
+.video iframe,
+.video object,
+.video embed
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 260px
+
 
 /* OBJECTS */
 /* For styling objects */
@@ -146,6 +163,9 @@
 .image-post
   background-color: $site-white
 
+.video-post
+  background-color: $site-white
+
 .quote-post
   background-color: $site-litePurple
 
@@ -157,10 +177,7 @@
 
     > .cta
       @extend .font-cd-bolditalic
-
-    a:link 
-      color:$site-black
-
+      
     p 
       @extend .font-tng-med
       font-size: $font-l
@@ -170,9 +187,23 @@
       color: $site-purple 
       width: 350px
       margin: 0 auto
+      padding: 30px 0 30px 0
 
+    a:link
+      color: $site-black
+      border-bottom: 3px solid $site-grey
+
+    a:visited
+      color: $site-purple
+      border-bottom: 3px solid $site-purple
+
+    a:hover
+      color: $site-white
+      border-bottom: 3px solid $site-white
+
+    a:active
+      color: $site-black 
     
-
 #feeds--blog
 
 #feeds--social

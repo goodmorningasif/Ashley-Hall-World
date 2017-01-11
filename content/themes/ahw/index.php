@@ -47,7 +47,7 @@ get_header(); ?>
       $count = 0;
 
       if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-      $count++;
+      
 
       /** 
       * Variables 
@@ -71,12 +71,14 @@ get_header(); ?>
       * print_r($image);
       * echo '</pre>';
       * echo "<script>console.log('".$video.", outputs video obj');</script>"; 
+      * echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
       */ 
-      echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
+      
     ?>
       
       <?php 
         if ($feed === 'Main Feed'){ 
+          $count++;
       ?>
 
         <?php if ($type === 'Image') { ?> 
@@ -99,9 +101,9 @@ get_header(); ?>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
               <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo get_the_content(); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo get_the_content(); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
               <?php } ?>
               <span class="cta">
                 <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
@@ -110,8 +112,20 @@ get_header(); ?>
               </span>
             </div>
           </article>
-        <?php } else if($type === 'Video') { ?>
 
+        <?php } else if($type === 'Video') { ?>
+          <article class="video-post" id="blog-<?php echo $count; ?>">
+            <div class="video"><?php echo the_field('video_link'); ?></div>
+            <div class="content">
+              <span class="label"><?php echo $subtitle; ?></span>
+              <h3><?php the_title(); ?></h3>
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
+              <?php } ?>
+            </div>
+          </article>
         <?php } ?>
 
       <?php } ?>
