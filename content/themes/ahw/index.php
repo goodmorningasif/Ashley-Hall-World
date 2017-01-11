@@ -71,20 +71,21 @@ get_header(); ?>
 
         <?php if ($type === 'Image') { ?> 
           <article>
-            <div class="image" id="blog-02">
+            <div class="image" id="blog-<?php echo $count; ?>" style="">
             </div>
             <div class="content">
               <span class="label"><?php $subtitle; ?></span>
               <h3><?php the_title(); ?></h3>
-              <?php if ( $count%2 === 0 ) { 
-                  echo '<p>'.wp_trim_words(get_the_content(), 40, '...').'</p>'; 
-                } else {
-                  echo '<p>'.wp_trim_words(get_the_content(), 10, '...').'</p>'; 
-                } ?>
+              <?php if ( $count%2 === 0 ) { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
+              <?php } ?>
             </div>
           </article>
+
         <?php } else if($type === 'Quote') { ?>
-          <article>
+         <!--  <article>
             <div class="image" id="blog-02">
             </div>
             <div class="content">
@@ -96,7 +97,7 @@ get_header(); ?>
                   echo '<p>'.wp_trim_words(get_the_content(), 10, '...').'</p>'; 
                 } ?>
             </div>
-          </article>
+          </article> -->
         <?php } else if($type === 'Video') { ?>
 
         <?php } ?>
