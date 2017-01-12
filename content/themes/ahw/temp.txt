@@ -42,3 +42,28 @@
           <p>sedut perspiciatis unde omnis iste natus.</p>
         </div>
       </article> -->
+
+
+<!-- <header>
+        <h2>Learn Like A Girl</h2>
+      </header>
+
+      <article>
+        <div class="image" id="soc-01">
+        </div>
+        <div class="content">
+          <span class="label">History</span>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article>
+
+      <article>
+        <div class="image" id="soc-01">
+        </div>
+        <div class="content">
+          <span class="label">History</span>
+          <h3>Mcbee Plaid</h3>
+          <p>sedut perspiciatis unde omnis iste natus.</p>
+        </div>
+      </article> -->

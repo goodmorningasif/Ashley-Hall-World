@@ -45,9 +45,7 @@ get_header(); ?>
       */ 
       
       $count = 0;
-
       if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-      
 
       /** 
       * Variables 
@@ -73,7 +71,7 @@ get_header(); ?>
       * echo "<script>console.log('".$video.", outputs video obj');</script>"; 
       * echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
       */ 
-      
+      // echo "<script>console.log('".$loops.", outputs total ammt of loops');</script>";
     ?>
       
       <?php 
@@ -87,7 +85,7 @@ get_header(); ?>
             style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <h3><?php the_title(); ?></h3>
+              <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
               <?php if ( $count%2 !== 0 ) { ?>
                 <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
               <?php } else { ?>
@@ -101,9 +99,9 @@ get_header(); ?>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
               <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 40, '...'); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 15, '...'); ?></p>
               <?php } ?>
               <span class="cta">
                 <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
@@ -118,7 +116,7 @@ get_header(); ?>
             <div class="video"><?php echo the_field('video_link'); ?></div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <h3><?php the_title(); ?></h3>
+              <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
               <?php if ( $count%2 !== 0 ) { ?>
                 <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
               <?php } else { ?>
@@ -126,13 +124,11 @@ get_header(); ?>
               <?php } ?>
             </div>
           </article>
-        <?php } ?>
+        <?php } else {
+            echo "<script>console.log('".$type.", outputs types');</script>";
+          } ?>
 
       <?php } ?>
-
-
-
-
     <?php endwhile; else : ?>
       <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
     <?php endif; /* End Loop */ ?> 
@@ -141,31 +137,7 @@ get_header(); ?>
 
   <section id="feeds--social">
 
-   <!--    <header>
-        <h2>Learn Like A Girl</h2>
-      </header>
-
-      <article>
-        <div class="image" id="soc-01">
-        </div>
-        <div class="content">
-          <span class="label">History</span>
-          <h3>Mcbee Plaid</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-        </div>
-      </article>
-
-      <article>
-        <div class="image" id="soc-01">
-        </div>
-        <div class="content">
-          <span class="label">History</span>
-          <h3>Mcbee Plaid</h3>
-          <p>sedut perspiciatis unde omnis iste natus.</p>
-        </div>
-      </article> -->
-
-    </section>
+  </section>
   
 
 

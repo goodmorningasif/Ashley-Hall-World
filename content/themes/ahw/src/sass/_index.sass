@@ -65,6 +65,10 @@
   > article:nth-child(odd)
     flex: 1 0 500px
 
+  .quote-post
+    > p 
+      margin: 0 50px
+
   > article:nth-child(even)
     flex: 0 0 265px
     margin: 0 0 0 15px
@@ -181,11 +185,10 @@
     p 
       @extend .font-tng-med
       font-size: $font-l
-      letter-spacing: 0.1em
-      line-height: 1em
+      letter-spacing: 0.05em
+      line-height: 1.2em
       text-transform: uppercase
       color: $site-purple 
-      width: 350px
       margin: 0 auto
       padding: 30px 0 30px 0
 
