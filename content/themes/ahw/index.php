@@ -36,7 +36,6 @@ get_header(); ?>
 <!-- ====  Section: Feeds  ==== -->
 <section id="feeds">
 
-  
   <section id="feeds--blog">
 
     <?php
@@ -58,28 +57,14 @@ get_header(); ?>
       $image = get_field('image_upload') ?: '';
       $click_through = get_field('click-through_link');
       $cta = get_field('quote_cta');
-      // $video = the_field('video_link') ?: '';
-      
-      /**
-      *  Console Logs
-      * 
-      * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
-      * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
-      * echo '<pre>';
-      * print_r($image);
-      * echo '</pre>';
-      * echo "<script>console.log('".$video.", outputs video obj');</script>"; 
-      * echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
-      */ 
-      // echo "<script>console.log('".$loops.", outputs total ammt of loops');</script>";
-    ?>
-      
-      <?php 
-        if ($feed === 'Main Feed'){ 
-          $count++;
-      ?>
+  
 
-        <?php if ($type === 'Image') { ?> 
+      if ($feed === 'Main Feed'){ 
+        $count++;
+
+        if ($type === 'Image') {
+    ?>
+          <!-- Image Post -->
           <article class="image-post" id="blog-<?php echo $count; ?>">
             <div class="image"  
             style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
@@ -93,7 +78,8 @@ get_header(); ?>
               <?php } ?>
             </div>
           </article>
-
+        
+        <!-- Quote Post -->
         <?php } else if($type === 'Quote') { ?>
           <article class="quote-post" id="blog-<?php echo $count; ?>">
             <div class="content">
@@ -110,7 +96,8 @@ get_header(); ?>
               </span>
             </div>
           </article>
-
+        
+        <!-- Video Post -->
         <?php } else if($type === 'Video') { ?>
           <article class="video-post" id="blog-<?php echo $count; ?>">
             <div class="video"><?php echo the_field('video_link'); ?></div>
@@ -124,10 +111,7 @@ get_header(); ?>
               <?php } ?>
             </div>
           </article>
-        <?php } else {
-            echo "<script>console.log('".$type.", outputs types');</script>";
-          } ?>
-
+        <?php } ?>
       <?php } ?>
     <?php endwhile; else : ?>
       <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
@@ -136,11 +120,106 @@ get_header(); ?>
   </section>
 
   <section id="feeds--social">
+    <?php
+      /** 
+      * the Loop => for Learn Feed
+      */ 
+      
+      $count = 0;
+      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+
+      /** 
+      * Variables 
+      */
+
+      $feed = get_field('feed_selection') ?: '';
+      $type = get_field('post_type') ?: '';
+      $subtitle = get_field('subtitle') ?: '';
+      $link = get_field('click-through_link') ?: '';
+      $image = get_field('image_upload') ?: '';
+      $click_through = get_field('click-through_link');
+      $cta = get_field('quote_cta');
+      // $video = the_field('video_link') ?: '';
+
+      if ($feed === 'Learn Feed'){ 
+        $count++;
+
+        if ($type === 'Image') {
+    ?>
+          <!-- Image Post -->
+          <article class="image-post" id="blog-<?php echo $count; ?>">
+            <div class="image"  
+            style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
+            <div class="content">
+              <span class="label"><?php echo $subtitle; ?></span>
+              <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
+              <?php } ?>
+            </div>
+          </article>
+        
+        <!-- Quote Post -->
+        <?php } else if($type === 'Quote') { ?>
+          <article class="quote-post" id="blog-<?php echo $count; ?>">
+            <div class="content">
+              <span class="label"><?php echo $subtitle; ?></span>
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 15, '...'); ?></p>
+              <?php } ?>
+              <span class="cta">
+                <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
+                  <?php echo $cta; ?>
+                </a>
+              </span>
+            </div>
+          </article>
+        
+        <!-- Video Post -->
+        <?php } else if($type === 'Video') { ?>
+          <article class="video-post" id="blog-<?php echo $count; ?>">
+            <div class="video"><?php echo the_field('video_link'); ?></div>
+            <div class="content">
+              <span class="label"><?php echo $subtitle; ?></span>
+              <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
+              <?php } ?>
+            </div>
+          </article>
+        <?php } ?>
+      <?php } ?>
+    <?php endwhile; else : ?>
+      <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
+    <?php endif; /* End Loop */ ?> 
 
   </section>
   
 
 
 </section>
+
+<?php
+
+  /**
+  *  Console Logs
+  * 
+  * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
+  * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
+  * echo '<pre>';
+  * print_r($image);
+  * echo '</pre>';
+  * echo "<script>console.log('".$video.", outputs video obj');</script>"; 
+  * echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
+  * echo "<script>console.log('".$loops.", outputs total ammt of loops');</script>";
+  */  
+
+?>
 
 <?php get_footer();
