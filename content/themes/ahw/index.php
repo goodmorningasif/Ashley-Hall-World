@@ -121,6 +121,10 @@ get_header(); ?>
 
   <section id="feeds--social">
 
+    <header>
+      <h2>Learn Like A Girl</h2>
+    </header>
+
     <?php
       /** 
       * the Loop => for Learn Feed
@@ -163,11 +167,7 @@ get_header(); ?>
           <article class="quote-post" id="learn-<?php echo $count; ?>">
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
-              <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 15, '...'); ?></p>
-              <?php } ?>
+              <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
               <span class="cta">
                 <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
                   <?php echo $cta; ?>

@@ -30,7 +30,6 @@
   svg 
     width: 100px
 
-/**/
 /* Feeds Positioning */
 
 #feeds
@@ -60,7 +59,7 @@
     padding: 10px
 
     .content
-      padding: 10px 40px 0 40px 
+      padding: 15px 40px 0 40px 
 
     .image
       height: 260px
@@ -85,6 +84,9 @@
   align-items: flex-start
   flex-wrap: wrap
 
+  p 
+    padding: 10px 0 15px 0
+
   > header
     margin-bottom: 5px
 
@@ -94,10 +96,12 @@
     padding: 10px
 
     .content
-      padding: 10px 10px 0 10px
+      padding: 10px
 
     .image
       height: 120px
+
+
 
 /* Play Button Centering */
 .image
@@ -177,12 +181,19 @@
 
 .quote-post
   background-color: $site-litePurple
+  > .label 
+    color: $site-grey
+  > .cta 
+    a:link
+      color: $site-grey
+
+
 
   > .content
     text-align: center
 
     > .label 
-      color: $site-black
+      color: $site-grey
 
     > .cta
       @extend .font-cd-bolditalic
@@ -200,6 +211,7 @@
     a:link
       color: $site-black
       border-bottom: 3px solid $site-grey
+      font-size: $font-ms
 
     a:visited
       color: $site-purple
@@ -222,9 +234,11 @@
       font-size: $font-l
 
 
+
 #feeds--social
   h3
-    font-size: $font-ms
+    font-size: $font-s
+    line-height: 1.3em
 
   p 
     font-size: $font-s
