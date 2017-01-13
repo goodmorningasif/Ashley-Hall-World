@@ -61,12 +61,12 @@
     .content
       padding: 15px 40px 0 40px 
 
+
     .image
       height: 260px
   
   > article:nth-child(odd)
     flex: 1 0 500px
-
 
   > article:nth-child(even)
     flex: 0 0 250px
@@ -76,9 +76,17 @@
     margin-top: 15px
 
   .quote-post
+    padding 10px
 
-    > p 
-      margin: 0 50px
+  .quote-post:nth-child(odd)
+
+    p 
+      padding: 30px 100px 15px 100px
+
+  .quote-post:nth-child(even)
+
+    p 
+      padding: 30px 0 15px 0
 
 #feeds--social
   display: flex
@@ -87,7 +95,7 @@
   flex-wrap: wrap
 
   p 
-    padding: 10px 0 15px 0
+    padding: 10px 0
 
   > header
     margin-bottom: 5px
@@ -101,7 +109,7 @@
       padding: 10px
 
     .image
-      height: 120px
+      height: 160px
 
 
 /* Play Button Centering */
@@ -184,6 +192,7 @@
 
   > .label 
     color: $site-grey
+
   > .cta 
     a:link
       color: $site-grey
@@ -205,20 +214,20 @@
       text-transform: uppercase
       color: $site-purple 
       margin: 0 auto
-      padding: 30px 0 30px 0
+      
 
     a:link
       color: $site-grey
-      border-bottom: 3px solid $site-grey
+      border-bottom: 2px solid $site-grey
       font-size: $font-ms
 
     a:visited
       color: $site-purple
-      border-bottom: 3px solid $site-purple
+      border-bottom: 2px solid $site-purple
 
     a:hover
       color: $site-white
-      border-bottom: 3px solid $site-white
+      border-bottom: 2px solid $site-white
 
     a:active
       color: $site-black 
@@ -237,15 +246,24 @@
       font-size: $font-l
 
   h3
-    font-size: $font-s
+    font-size: $font-ms
     line-height: 1.3em
 
   p 
     font-size: $font-s
   
-
   > .quote-post
     background-color: $site-white
+
+    .label
+      border-bottom: 2px solid $site-grey
+
+    p
+      font-size: $font-m 
+
+    a:hover
+      color: $site-purple
+      border-bottom: 2px solid $site-purple
 
 
 /* Temp Styles for Testing */

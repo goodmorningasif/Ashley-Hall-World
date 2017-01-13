@@ -74,7 +74,7 @@ get_header(); ?>
                 <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
                 <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
               <?php } else { ?>
-                <h3><?php echo mb_strimwidth(get_the_title(), 0, 15, '...'); ?></h3>
+                <h3><?php echo mb_strimwidth(get_the_title(), 0, 14, '...'); ?></h3>
                 <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
               <?php } ?>
             </div>
@@ -86,9 +86,9 @@ get_header(); ?>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
               <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
               <?php } ?>
               <span class="cta">
                 <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
@@ -108,7 +108,7 @@ get_header(); ?>
                 <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
                 <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
               <?php } else { ?>
-                <h3><?php echo mb_strimwidth(get_the_title(), 0, 15, '...'); ?></h3>
+                <h3><?php echo mb_strimwidth(get_the_title(), 0, 14, '...'); ?></h3>
                 <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
               <?php } ?>
             </div>
@@ -159,8 +159,8 @@ get_header(); ?>
             </div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <h3><?php echo wp_trim_words(get_the_title(), 2, '...'); ?></h3>
-              <p><?php echo wp_trim_words(get_the_content(), 5, '...'); ?></p>
+              <h3><?php echo mb_strimwidth(get_the_title(), 0, 15, '...'); ?></h3>
+              <p><?php echo mb_strimwidth(get_the_content(), 0, 36, '...'); ?></p>
             </div>
           </article>
         
@@ -169,7 +169,7 @@ get_header(); ?>
           <article class="quote-post" id="learn-<?php echo $count; ?>">
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
+              <p><?php echo mb_strimwidth(get_the_content(), 0, 55, '...'); ?></p>
               <span class="cta">
                 <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
                   <?php echo $cta; ?>
