@@ -9,10 +9,7 @@
 #discovery-map  
   background-color: $site-white
   header
-	  display: flex
-	  justify-content: space-between
-	  align-items: flex-start
-	  flex-wrap: wrap
+	  @extend .flex-spcbtw-strt-wrp
 
 #corner-link
   flex: 0 0 auto
@@ -33,10 +30,7 @@
 /* Feeds Positioning */
 
 #feeds
-  display: flex
-  justify-content: space-between
-  align-items: flex-start
-  flex-wrap: wrap
+  @extend .flex-spcbtw-strt-wrp
   padding: 0 0 50px 0
   width: 1000px
   margin: 0 auto
@@ -49,10 +43,7 @@
     flex: 0 0 160px
 
 #feeds--main
-  display: flex
-  justify-content: space-between
-  align-items: flex-start
-  flex-wrap: wrap
+  @extend .flex-spcbtw-strt-wrp
 
   > article
     height: 410px
@@ -89,10 +80,7 @@
       padding: 30px 0 15px 0
 
 #feeds--learn
-  display: flex
-  justify-content: space-between
-  align-items: flex-start
-  flex-wrap: wrap
+  @extend .flex-spcbtw-strt-wrp
 
   p 
     padding: 10px 0
