@@ -20,39 +20,49 @@ time, mark, audio, video
   font: inherit
   vertical-align: baseline
 
+
 /* HTML5 display-role reset for older browsers  */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section 
   display: block
 
+
 body 
   line-height: 1
+
 
 ol, ul 
   list-style: none
 
+
 blockquote, q 
   quotes: none
+
 
 blockquote:before, blockquote:after,
 q:before, q:after 
   content: ''
   content: none
 
+
 table 
   border-collapse: collapse
   border-spacing: 0
 
+
 a, u 
   text-decoration: none
 
-/* VARIABLES, EXTENDS, FONTS and MIXINS */
+
+/* VARIABLES, EXTENDS, and MIXINS */
+
 $site-bg: #F1F1F1
 $site-white: #fff
 $site-black: #000
 $site-grey: #414042
 $site-purple: #6E5C7F
 $site-litePurple: #C7B8CD
+
 
 $font-xs: 0.55em  
 $font-ms: 0.7em
@@ -62,6 +72,7 @@ $font-m: 1.2em
 $font-ml: 1.4em  
 $font-l: 1.8em
 $font-xl: 2.7em
+
 
 .font-cd-roman, 
 .font-cd-italic, 
@@ -76,6 +87,7 @@ $font-xl: 2.7em
   font-style: normal
   font-weight: 600
 
+
 .font-gss-book,
 .font-gss-italic,
 .font-gss-bold,
@@ -84,11 +96,13 @@ $font-xl: 2.7em
   font-style: normal
   font-weight: 400
 
+
 .font-cd-italic, 
 .font-cd-bolditalic,
 .font-gss-italic, 
 .font-gss-bolditalic
   font-style: italic
+
 
 .font-gss-bold, 
 .font-gss-bolditalic,
@@ -96,26 +110,31 @@ $font-xl: 2.7em
 .font-cd-bolditalic
   font-weight: 700
 
+
 $break-large: 1200px
 $break-small: 450px
 
-.flex-spcbtw-strt-wrp
-  display: flex
-  justify-content: space-between
-  align-items: flex-start
-  flex-wrap: wrap
+
+@mixin flxx($d: flex, $j: space-between, $a: flex-start, $f: wrap)
+  display: $d
+  justify-content: $j
+  align-items: $a
+  flex-wrap: $f
 
 
-/* SITE CONTEXT*/
+/* SITE CONTEXT -> Global styles */
+
 h1
+
 
 h2
   @extend .font-tng-med
   color: $site-purple
+  font-size: $font-xl
   text-transform: uppercase
   letter-spacing: 0.1em
   line-height: 1.1em
-  font-size: $font-xl
+
 
 h3
   @extend .font-gss-bold
@@ -125,21 +144,25 @@ h3
   letter-spacing: 0.1em
   margin: 20px 0 0 0
 
+
 h4
+
 
 p
   @extend .font-cd-roman
-  font-size: $font-s
   color: $site-grey
+  font-size: $font-s
   line-height: 1.2em
 
 html 
   @extend .font-cd-roman
   background-color: $site-bg
 
+
 body
   font-size: $font-body
   line-height: 1.3em
+
 
 #wrap
   width: 1000px
@@ -147,6 +170,7 @@ body
 
 
 @import 'index' 
+
 
 @import 'footer'
 

@@ -1,20 +1,22 @@
 /*  _index.scss */
 
 
-/* PAGE CONTEXT */
-/* For positioning items */
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
 
-/* Discovery Map */
+/* Discovery Map position */
 
 #discovery-map  
-  background-color: $site-white
   header
-	  @extend .flex-spcbtw-strt-wrp
+	  @include flxx
+
 
 #corner-link
   flex: 0 0 auto
   svg
     width: 150px
+
 
 #logo-main
   flex: 0 0 auto
@@ -22,15 +24,16 @@
   svg
     width: 400px
 
+
 #logo-seal
   flex: 0 0 auto
   svg 
     width: 100px
 
-/* Feeds Positioning */
+/* Feeds positioning */
 
 #feeds
-  @extend .flex-spcbtw-strt-wrp
+  @include flxx
   padding: 0 0 50px 0
   width: 1000px
   margin: 0 auto
@@ -42,8 +45,9 @@
   > section:nth-child(2)
     flex: 0 0 160px
 
+
 #feeds--main
-  @extend .flex-spcbtw-strt-wrp
+  @include flxx
 
   > article
     height: 410px
@@ -52,10 +56,9 @@
     .content
       padding: 15px 40px 0 40px 
 
-
     .image
       height: 260px
-  
+
   > article:nth-child(odd)
     flex: 1 0 500px
 
@@ -68,19 +71,20 @@
 
   .quote-post
     padding 10px
+      p 
+      margin: 0 auto
 
   .quote-post:nth-child(odd)
-
     p 
       padding: 30px 100px 15px 100px
 
   .quote-post:nth-child(even)
-
     p 
       padding: 30px 0 15px 0
 
+
 #feeds--learn
-  @extend .flex-spcbtw-strt-wrp
+  @include flxx
 
   p 
     padding: 10px 0
@@ -100,20 +104,21 @@
       height: 160px
 
 
-/* Play Button Centering */
-.image  
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-wrap: nowrap
+/* Play Button positioning */
+
+.image 
+  @include flxx(flex, center, center, nowrap) 
 
   .play-bttn
     flex: 0 0 auto
     width: 50px
 
+
 .content
   p 
     padding: 10px 0 30px 0 
+
+/* Embedded video positioning */
 
 .video
   position: relative;
@@ -122,6 +127,7 @@
   overflow: hidden
   max-width: 100%
   height: 260px
+
 
 .video iframe,
 .video object,
@@ -133,8 +139,27 @@
   height: 260px
 
 
-/* OBJECTS */
-/* For styling objects */
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#discovery-map  
+  background-color: $site-white
+
+
+#corner-link
+  > svg
+    .cls-1
+      fill: $site-white
+    .cls-2
+      fill: $site-grey
+
+
+#pre-feeds
+  > h2
+    text-align: center
+    padding: 30px 0
+
 
 .play-bttn 
   svg
@@ -148,6 +173,7 @@
     path
       fill: $site-white 
 
+
 .label
   @extend .font-gss-bold
   font-size: $font-xs
@@ -155,20 +181,7 @@
   letter-spacing: 0.1em
   color: $site-purple
   border-bottom: 3px solid $site-grey
-  padding: 0 0 1px 0
-
-#corner-link
-  > svg
-    .cls-1
-      fill: $site-white
-    .cls-2
-      fill: $site-grey
-
-#pre-feeds
-  > h2
-    text-align: center
-    padding: 30px 0
-
+  padding: 0 0 1px 0 // to separate border bottom, keep here for now
 
 .image-post
   background-color: $site-white
@@ -201,8 +214,6 @@
       line-height: 1.2em
       text-transform: uppercase
       color: $site-purple 
-      margin: 0 auto
-      
 
     a:link
       color: $site-grey
@@ -220,9 +231,11 @@
     a:active
       color: $site-black 
     
+
 #feeds--main
   > .quote-post
       background-color: $site-litePurple
+
 
 #feeds--learn
 
@@ -254,17 +267,4 @@
       border-bottom: 2px solid $site-purple
 
 
-/* Temp Styles for Testing */
-
-// #blog-01
-//   background: #fff url("./../assets/img-01.jpg") no-repeat center
-//   background-size: cover
-
-// #blog-02
-//   background: #fff url("./../assets/img-02.jpg") no-repeat center
-//   background-size: cover
-
-// #soc-01
-//   background: #fff url("./../assets/img-03.jpg") no-repeat center
-//   background-size: cover
 
