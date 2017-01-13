@@ -70,11 +70,12 @@ get_header(); ?>
             style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
               <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 28, '...'); ?></p>
+                <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
+                <h3><?php echo mb_strimwidth(get_the_title(), 0, 15, '...'); ?></h3>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
               <?php } ?>
             </div>
           </article>
@@ -103,11 +104,12 @@ get_header(); ?>
             <div class="video"><?php echo the_field('video_link'); ?></div>
             <div class="content">
               <span class="label"><?php echo $subtitle; ?></span>
-              <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
               <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+                <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
+                <h3><?php echo mb_strimwidth(get_the_title(), 0, 15, '...'); ?></h3>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
               <?php } ?>
             </div>
           </article>
