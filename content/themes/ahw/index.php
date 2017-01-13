@@ -72,7 +72,7 @@ get_header(); ?>
               <span class="label"><?php echo $subtitle; ?></span>
               <h3><?php echo wp_trim_words(get_the_title(), 5, '...'); ?></h3>
               <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 28, '...'); ?></p>
               <?php } else { ?>
                 <p><?php echo wp_trim_words(get_the_content(), 8, '...'); ?></p>
               <?php } ?>
@@ -87,7 +87,7 @@ get_header(); ?>
               <?php if ( $count%2 !== 0 ) { ?>
                 <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
               <?php } else { ?>
-                <p><?php echo wp_trim_words(get_the_content(), 15, '...'); ?></p>
+                <p><?php echo wp_trim_words(get_the_content(), 10, '...'); ?></p>
               <?php } ?>
               <span class="cta">
                 <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
