@@ -28,111 +28,21 @@ get_header(); ?>
   </header>
 </section>
 
-
 <header id="pre-feeds">
   <h2>A Day In The Life...</h2>
 </header>
 
 <!-- ====  Section: Feeds  ==== -->
 <section id="feeds">
-
-  <section id="feeds--blog">
-
-    <?php
-      /** 
-      * the Loop => for Main Feed
-      */ 
-      
-      $count = 0;
-      if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-
-      /** 
-      * Variables 
-      */
-
-      $feed = get_field('feed_selection') ?: '';
-      $type = get_field('post_type') ?: '';
-      $subtitle = get_field('subtitle') ?: '';
-      $link = get_field('click-through_link') ?: '';
-      $image = get_field('image_upload') ?: '';
-      $click_through = get_field('click-through_link');
-      $cta = get_field('quote_cta');
-  
-
-      if ($feed === 'Main Feed'){ 
-        $count++;
-
-        if ($type === 'Image') {
-    ?>
-          <!-- Image Post -->
-          <article class="image-post" id="main-<?php echo $count; ?>">
-            <div class="image"  
-            style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
-            <div class="content">
-              <span class="label"><?php echo $subtitle; ?></span>
-              <?php if ( $count%2 !== 0 ) { ?>
-                <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
-              <?php } else { ?>
-                <h3><?php echo mb_strimwidth(get_the_title(), 0, 14, '...'); ?></h3>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
-              <?php } ?>
-            </div>
-          </article>
-        
-        <!-- Quote Post -->
-        <?php } else if($type === 'Quote') { ?>
-          <article class="quote-post" id="main-<?php echo $count; ?>">
-            <div class="content">
-              <span class="label"><?php echo $subtitle; ?></span>
-              <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
-              <?php } else { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
-              <?php } ?>
-              <span class="cta">
-                <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
-                  <?php echo $cta; ?>
-                </a>
-              </span>
-            </div>
-          </article>
-        
-        <!-- Video Post -->
-        <?php } else if($type === 'Video') { ?>
-          <article class="video-post" id="main-<?php echo $count; ?>">
-            <div class="video"><?php echo the_field('video_link'); ?></div>
-            <div class="content">
-              <span class="label"><?php echo $subtitle; ?></span>
-              <?php if ( $count%2 !== 0 ) { ?>
-                <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
-              <?php } else { ?>
-                <h3><?php echo mb_strimwidth(get_the_title(), 0, 14, '...'); ?></h3>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
-              <?php } ?>
-            </div>
-          </article>
-        <?php } ?>
-      <?php } ?>
-    <?php endwhile; else : ?>
-      <p><?php _e( 'Sorry, no posts matched your criteria.'); ?></p>
-    <?php endif; /* End Loop */ ?> 
-   
+  <section id="feeds--main">
+    <?php get_template_part('components/feeds-main'); ?>
   </section>
-
-  <section id="feeds--social">
-
+  <section id="feeds--learn">
     <header>
       <h2>Learn Like A Girl</h2>
     </header>
-
     <?php get_template_part('components/feeds-learn'); ?>
-
   </section>
-  
-
-
 </section>
 
 <?php
@@ -141,13 +51,6 @@ get_header(); ?>
   *  Console Logs
   * 
   * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
-  * echo "<script>console.log('".$feed.", outputs var feed');</script>"; 
-  * echo '<pre>';
-  * print_r($image);
-  * echo '</pre>';
-  * echo "<script>console.log('".$video.", outputs video obj');</script>"; 
-  * echo "<script>console.log('".$subtitle." ".$count.", outputs subtitle & count');</script>";
-  * echo "<script>console.log('".$loops.", outputs total ammt of loops');</script>";
   */  
 
 ?>

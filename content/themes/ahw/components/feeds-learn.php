@@ -35,8 +35,8 @@
           </div>
         </article>
         
-        <!-- Quote Post -->
       <?php } else if($type === 'Quote') { ?>
+        <!-- Quote Post -->
         <article class="quote-post" id="learn-<?php echo $count; ?>">
           <div class="content">
             <span class="label"><?php echo $subtitle; ?></span>
