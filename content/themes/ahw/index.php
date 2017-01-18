@@ -16,16 +16,27 @@
 
 
 <!-- ====  Section: Discovery Map  ==== -->
+<article id="popup-video">
+  <div class="image"  
+  style="background: #fff url('<?php echo $GLOBALS['url']; ?>/assets/img-01.jpg') no-repeat center; background-size: cover"></div>
+  <div class="content">
+    <span class="label">Learn</span>
+    <h3>Headline goes here</h3>
+  </div>
+</article>
+<div id="popup-dimmer"></div>
+
 <section id="discovery-map">
   <header>
     <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
-    <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-main.svg"); ?></div>
+    <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?></div>
     <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
   </header>
 
   <div id="headline"><?php echo file_get_contents($GLOBALS['url']."/assets/discover-text.svg"); ?></div>
   <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div> 
   
+  <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="gym"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="lanehall"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>

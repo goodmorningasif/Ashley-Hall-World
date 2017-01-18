@@ -5,6 +5,38 @@
 /* includes positioning styles like display, padding, margin, height */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
+/* Popup Video */
+#popup-video
+  position: fixed
+  top: calc(50% - 250px)
+  right: calc(50% - 400px)
+  height: 500px
+  width: 800px
+  padding: 10px
+  z-index: 99
+  background-color: $site-white
+
+  > .image
+    height: 400px
+
+  > .label
+    display: inline-block
+
+  > h3
+    display: inline-block
+
+
+#popup-dimmer
+  position: fixed
+  top: 0
+  right: 0
+  width: 100vw
+  height: 100vh
+  z-index: 88
+  background-color: $site-grey
+  opacity: 0.8
+
+
 /* Discovery Map position */
 
 #discovery-map
