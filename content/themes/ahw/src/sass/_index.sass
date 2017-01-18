@@ -7,10 +7,30 @@
 
 /* Discovery Map position */
 
-#discovery-map  
+#discovery-map
+  height: 2297px
+  width: 1280px
+  margin: 0 auto
+  position: relative
+
   header
 	  @include flxx
 
+#headline
+  width: 400px
+  margin: 100px auto 0
+  > svg 
+    .cls-2
+      fill: $site-grey
+
+#subhead
+  position: absolute
+  width: 333px
+  bottom: 86px
+  right: 194px
+  > svg 
+    .cls-2
+      fill: $site-grey
 
 #corner-link
   flex: 0 0 auto
@@ -145,8 +165,6 @@
 
 #discovery-map  
   background: $site-white url("/ashley-hall-world/content/themes/ahw/assets/bg-map-01.jpg") no-repeat center
-  height: 2297px
-
 
 #corner-link
   > svg

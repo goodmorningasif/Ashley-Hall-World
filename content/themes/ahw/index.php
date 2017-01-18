@@ -22,6 +22,9 @@
     <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-main.svg"); ?></div>
     <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
   </header>
+
+  <div id="headline"><?php echo file_get_contents($GLOBALS['url']."/assets/discover-text.svg"); ?></div>
+  <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div>
 </section>
 
 <header id="pre-feeds">
