@@ -35,7 +35,9 @@
   </header>
 
   <div id="headline-primary"><?php echo file_get_contents($GLOBALS['url']."/assets/text-1.svg"); ?></div>
+  <div id="subhead-primary"><?php echo file_get_contents($GLOBALS['url']."/assets/text-4.svg"); ?></div>
   <div id="headline-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-2.svg"); ?></div>
+  <div id="subhead-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-3.svg"); ?></div>
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
