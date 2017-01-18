@@ -34,8 +34,8 @@
     <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
   </header>
 
-  <div id="headline"><?php echo file_get_contents($GLOBALS['url']."/assets/discover-text.svg"); ?></div>
-  <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div>
+  <div id="headline-primary"><?php echo file_get_contents($GLOBALS['url']."/assets/text-1.svg"); ?></div>
+  <div id="headline-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-2.svg"); ?></div>
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
