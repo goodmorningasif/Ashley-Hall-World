@@ -16,7 +16,7 @@
 
 
 <!-- ====  Section: Discovery Map  ==== -->
-<article id="popup-video">
+<article id="map-popup">
   <div class="close-bttn"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="image"  
   style="background: #fff url('<?php echo $GLOBALS['url']; ?>/assets/img-01.jpg') no-repeat center; background-size: cover"></div>
@@ -25,7 +25,7 @@
     <h3>Headline goes here</h3>
   </div>
 </article>
-<div id="popup-dimmer"></div>
+<div id="popup-overlay"></div>
 
 <section id="discovery-map">
   <header>
@@ -35,7 +35,7 @@
   </header>
 
   <div id="headline"><?php echo file_get_contents($GLOBALS['url']."/assets/discover-text.svg"); ?></div>
-  <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div> 
+  <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div>
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
