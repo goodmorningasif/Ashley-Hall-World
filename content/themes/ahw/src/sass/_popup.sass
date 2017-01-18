@@ -1,0 +1,61 @@
+/*  _popup.sass */
+
+
+/* PAGE CONTEXT -> For positioning items */
+/* includes positioning styles like display, padding, margin, height */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+/* Popup Video */
+#map-popup 
+  display: none
+  position: fixed
+  top: calc(50% - 250px)
+  right: calc(50% - 400px)
+  height: 500px
+  width: 800px
+  padding: 10px
+  z-index: 99
+
+  > .image
+    height: 425px
+
+  > .content 
+    padding: 25px 80px
+
+    > .label
+      vertical-align: top
+
+    > h3
+      padding-left: 40px
+      display: inline-block
+      margin: 4px 0 0 0
+
+.close-bttn
+  position: absolute
+  top: -20px
+  right: -20px
+  width: 40px
+
+#popup-overlay
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  width: 100vw
+  height: 100vh
+  z-index: 88
+
+
+/* OBJECTS -> For styling objects */
+/* Includes cosmetic styles like color, typography, and borders */
+/* INCEPTION RULE: DO NOT nest more than 4  */
+
+#map-popup
+  background-color: $site-white
+
+.close-bttn
+  transform: rotate(45deg);
+
+#popup-overlay
+  background-color: $site-grey
+  opacity: 0.8
