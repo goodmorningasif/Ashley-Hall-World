@@ -31,7 +31,7 @@
   <header>
     <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
     <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?></div>
-    <div id="logo-seal"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-seal.svg"); ?></div>
+    <div id="logo-seal"></div>
   </header>
 
   <div id="headline-primary"><?php echo file_get_contents($GLOBALS['url']."/assets/text-1.svg"); ?></div>
