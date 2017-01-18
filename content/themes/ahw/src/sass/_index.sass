@@ -6,7 +6,8 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 /* Popup Video */
-#popup-video
+#popup-video 
+  display: none
   position: fixed
   top: calc(50% - 250px)
   right: calc(50% - 400px)
@@ -19,7 +20,7 @@
   > .image
     height: 425px
 
-  >.content 
+  > .content 
     padding: 25px 80px
 
     > .label
@@ -30,8 +31,15 @@
       display: inline-block
       margin: 4px 0 0 0
 
+.close-bttn
+  position: absolute
+  top: -20px
+  right: -20px
+  width: 40px
+  transform: rotate(45deg);
 
 #popup-dimmer
+  display: none
   position: fixed
   top: 0
   right: 0
