@@ -1,4 +1,4 @@
-/*  _index.scss */
+/*  _index.sass */
 
 
 /* PAGE CONTEXT -> For positioning items */
@@ -50,108 +50,8 @@
   opacity: 0.8
 
 
-/* Discovery Map position */
-
-#discovery-map
-  height: 2297px
-  width: 1280px
-  margin: 0 auto
-  position: relative
-
-  header
-	  @include flxx
-
-#headline-primary
-  width: 400px
-  margin: 111px auto 0
-
-#subhead-primary
-  width: 275px
-  margin: 20px auto 0
-
-#disc-group
-  > .st0
-    fill: $site-purple
-
-#offers-group
-  > .st0
-    fill: $site-purple
-
-#offers-group
-  > .st0
-    fill: $site-purple
-
-#offers-group
-  > .st0
-    fill: $site-purple
-
-.hover-bttn
-  width: 40px
-
-#ingram
-  position: absolute
-  top: 704px
-  right: 183px
-
-#gym
-  position: absolute
-  top: 987px
-  right: 217px
-
-#lanehall
-  position: absolute
-  top: 1151px
-  right: 438px
-
-#shellhouse
-  position: absolute
-  top: 1025px
-  right: 592px
-
-#jenkinshall
-  position: absolute
-  top: 1258px
-  right: 1031px
-
-#ross
-  position: absolute
-  top: 1440px
-  right: 332px
-
-#pardue
-  position: absolute
-  top: 1918px
-  right: 797px
-
-#headline-continue
-  position: absolute
-  width: 333px
-  bottom: 233px
-  right: 194px
-
-#subhead-continue
-  position: absolute
-  width: 220px
-  bottom: 145px
-  right: 261px
-  
-
-#corner-link
-  flex: 0 0 auto
-  svg
-    width: 200px
-
-
-#logo-main
-  flex: 0 0 auto
-  padding: 50px 0 0 0 
-  svg
-    width: 250px
-
-
-#logo-seal
-  flex: 0 0 auto
-  width: 200px
+/* Discovery Map */
+@import 'discovery' 
 
 /* Feeds positioning */
 
@@ -266,17 +166,6 @@
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
-#discovery-map  
-  background: $site-white url("/ashley-hall-world/content/themes/ahw/assets/bg-map-01.jpg") no-repeat center
-
-#corner-link
-  > svg
-    .cls-1
-      fill: $site-white
-    .cls-2
-      fill: $site-grey
-
-
 #pre-feeds
   > h2
     text-align: center
@@ -323,7 +212,7 @@
     a:link
       color: $site-grey
 
-  > .content
+      > .content
     text-align: center
 
     > .label 
