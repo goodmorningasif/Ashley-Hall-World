@@ -16,7 +16,6 @@
 
 
 <!-- ====  Section: Discovery Map  ==== -->
-<!-- Benjamin's code goes here -->
 <section id="discovery-map">
   <header>
     <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
