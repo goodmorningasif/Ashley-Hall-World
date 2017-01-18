@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38"><defs><style>.cls-1{fill:#4e4e56;}.cls-2{fill:#6e5c7f;}.cls-2,.cls-3{stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px;}.cls-3{fill:none;}</style></defs><title>hover-bttn</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><circle class="cls-1" cx="19" cy="19" r="19"/><circle class="cls-2" cx="19" cy="19" r="14.99"/><line class="cls-3" x1="19.17" y1="11.83" x2="19.17" y2="26.33"/><line class="cls-3" x1="26.42" y1="19.08" x2="11.92" y2="19.08"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4E4E56;}
+	.st1{fill:#6E5C7F;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-miterlimit:10;}
+</style>
+<title>hover-bttn</title>
+<g id="Layer_2">
+	<g id="Layer_1-2">
+		<circle class="st0" cx="19" cy="19" r="19"/>
+		<circle class="st1" cx="19" cy="19" r="15"/>
+		<line class="st2" x1="19.2" y1="11.8" x2="19.2" y2="26.3"/>
+		<line class="st2" x1="26.4" y1="19.1" x2="11.9" y2="19.1"/>
+	</g>
+</g>
+</svg>

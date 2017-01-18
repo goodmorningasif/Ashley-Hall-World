@@ -24,7 +24,14 @@
   </header>
 
   <div id="headline"><?php echo file_get_contents($GLOBALS['url']."/assets/discover-text.svg"); ?></div>
-  <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div>
+  <div id="subhead"><?php echo file_get_contents($GLOBALS['url']."/assets/offers-text.svg"); ?></div> 
+  
+  <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="gym"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="lanehall"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="jenkinshall"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="ross"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="pardue"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
 </section>
 
 <header id="pre-feeds">
