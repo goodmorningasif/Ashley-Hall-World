@@ -54,7 +54,7 @@ a, u
   text-decoration: none
 
 
-/* VARIABLES, EXTENDS, and MIXINS */
+/* Colors */
 
 $site-bg: #F1F1F1
 $site-white: #fff
@@ -63,6 +63,8 @@ $site-grey: #414042
 $site-purple: #6E5C7F
 $site-litePurple: #C7B8CD
 
+
+/* Font Sizes & Fonts */
 
 $font-xs: 0.55em  
 $font-ms: 0.7em
@@ -87,7 +89,6 @@ $font-xl: 2.7em
   font-style: normal
   font-weight: 600
 
-
 .font-gss-book,
 .font-gss-italic,
 .font-gss-bold,
@@ -96,13 +97,11 @@ $font-xl: 2.7em
   font-style: normal
   font-weight: 400
 
-
 .font-cd-italic, 
 .font-cd-bolditalic,
 .font-gss-italic, 
 .font-gss-bolditalic
   font-style: italic
-
 
 .font-gss-bold, 
 .font-gss-bolditalic,
@@ -111,12 +110,41 @@ $font-xl: 2.7em
   font-weight: 700
 
 
+/* Media Breakpoints & Mixins */
+
 $break-xlarge: 1280px
 $break-large: 1024px
 $break-medium: 768px
 $break-small: 640px
 $break-tiny: 300px
 
+
+=max 
+  @media(min-width: #{$break-xlarge})
+    @content
+
+=xlarge 
+  @media(min-width: #{$break-large}) and (max-width: #{$break-xlarge})
+    @content
+
+=large 
+  @media(min-width: #{$break-medium}) and (max-width: #{$break-large})
+    @content
+
+=medium
+  @media(min-width: #{$break-small}) and (max-width: #{$break-medium})
+    @content
+
+=small 
+  @media(min-width: #{$break-tiny}) and (max-width: #{$break-small})
+    @content
+
+=min
+  @media(max-width: #{$break-tiny})
+    @content
+
+
+/* Flux */
 
 =flxx($d: flex, $j: space-between, $a: flex-start, $f: wrap)
   display: $d
