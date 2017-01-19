@@ -16,9 +16,15 @@
   > section:nth-child(1)
     flex: 1 0 805px
     margin: 0 15px 0 0
+  
+    +min 
+      flex: 1 0 100%
 
   > section:nth-child(2)
     flex: 0 0 160px
+
+    +min
+      flex: 1 0 100%
 
 
 /* Main Feed Positioning */
@@ -36,12 +42,26 @@
     .image
       height: 260px
 
+    +min
+      flex: 1 0 100%
+
   > article:nth-child(odd)
     flex: 1 0 500px
+
+    +min
+      flex: 1 0 100%
 
   > article:nth-child(even)
     flex: 0 0 250px
     margin: 0 0 0 15px
+
+    +min 
+      flex: 1 0 100%
+      margin: 0 0 0 0
+
+  > article:nth-child(2)
+    +min 
+      margin-top: 15px
 
   > article:nth-child(n+3)
     margin-top: 15px
