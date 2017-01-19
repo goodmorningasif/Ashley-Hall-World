@@ -123,24 +123,12 @@ $break-tiny: 300px
   @media(min-width: #{$break-xlarge})
     @content
 
-=xlarge 
-  @media(min-width: #{$break-large}) and (max-width: #{$break-xlarge})
-    @content
-
-=large 
-  @media(min-width: #{$break-medium}) and (max-width: #{$break-large})
-    @content
-
 =medium
-  @media(min-width: #{$break-small}) and (max-width: #{$break-medium})
-    @content
-
-=small 
-  @media(min-width: #{$break-tiny}) and (max-width: #{$break-small})
+  @media(min-width: #{$break-small}) and (max-width: #{$break-xlarge})
     @content
 
 =min
-  @media(max-width: #{$break-tiny})
+  @media(max-width: #{$break-small})
     @content
 
 
