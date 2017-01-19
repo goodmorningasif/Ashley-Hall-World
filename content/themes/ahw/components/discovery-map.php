@@ -14,6 +14,7 @@
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="gym"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="lanehall"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="shellhouse"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="jenkinshall"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="ross"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="pardue"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
