@@ -11,8 +11,9 @@
   <div id="subhead-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-3.svg"); ?></div>
 
   <!-- GIFs -->
-  <!-- <div id="violin"><img src="<?php echo $GLOBALS['url']."/assets/gif-violin.gif"; ?>" alt="violin" /></div> -->
-  <!-- <div id="bball"><img src="<?php echo $GLOBALS['url']."/assets/gif-bball.gif"; ?>" alt="violin" /></div> -->
+  <div id="violin"><img src="<?php echo $GLOBALS['url']."/assets/gif-violin.gif"; ?>" alt="violin" /></div>
+  <div id="bball"><img src="<?php echo $GLOBALS['url']."/assets/gif-bball.gif"; ?>" alt="basket ball" /></div>
+  <div id="gate1"><img src="<?php echo $GLOBALS['url']."/assets/gif-gate.gif"; ?>" alt="gate" /></div> -->
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
@@ -21,4 +22,4 @@
   <div class="hover-bttn" id="shellhouse"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="jenkinshall"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
   <div class="hover-bttn" id="ross"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
-  <div "class="hover-bttn" id="pardue"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
+  <div class="hover-bttn" id="pardue"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
