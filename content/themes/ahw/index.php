@@ -48,7 +48,6 @@
   * 
   * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
   */  
-
 ?>
 
 <?php get_footer();

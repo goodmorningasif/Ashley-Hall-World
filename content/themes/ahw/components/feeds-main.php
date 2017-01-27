@@ -10,6 +10,7 @@
   * Variables 
   */
 
+
   $feed = get_field('feed_selection') ?: '';
   $type = get_field('post_type') ?: '';
   $subtitle = get_field('subtitle') ?: '';
