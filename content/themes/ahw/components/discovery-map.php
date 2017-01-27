@@ -11,10 +11,13 @@
   <div id="subhead-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-3.svg"); ?></div>
 
   <!-- GIFs -->
-  <div id="violin"><img src="<?php echo $GLOBALS['url']."/assets/gif-violin.gif"; ?>" alt="violin" /></div>
-  <div id="bball"><img src="<?php echo $GLOBALS['url']."/assets/gif-bball.gif"; ?>" alt="basket ball" /></div>
-  <div id="gate1"><img src="<?php echo $GLOBALS['url']."/assets/gif-gate.gif"; ?>" alt="gate" /></div>
-  <div id="gate2"><img src="<?php echo $GLOBALS['url']."/assets/gif-gate2.gif"; ?>" alt="gate" /></div>
+  <img id="violin" src="<?php echo $GLOBALS['url']."/assets/gif-violin.gif"; ?>" alt="violin" />
+  <img id="bball" src="<?php echo $GLOBALS['url']."/assets/gif-bball.gif"; ?>" alt="basket ball" />
+  <img id="gate1" src="<?php echo $GLOBALS['url']."/assets/gif-gate.gif"; ?>" alt="gate" />
+  <img id="gate2" src="<?php echo $GLOBALS['url']."/assets/gif-gate2.gif"; ?>" alt="gate" />
+  <img id="swimmer" src="<?php echo $GLOBALS['url']."/assets/gif-swimmer.gif"; ?>" alt="swimmer" />
+  <img id="watercan" src="<?php echo $GLOBALS['url']."/assets/gif-watercan.gif"; ?>" alt="watercan" />
+  <img id="bear" src="<?php echo $GLOBALS['url']."/assets/gif-bear.gif"; ?>" alt="bear" />
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>
