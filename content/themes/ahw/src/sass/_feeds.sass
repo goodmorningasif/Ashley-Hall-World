@@ -13,23 +13,25 @@
   width: 1000px
   margin: 0 auto
 
-  +min
-    width: calc(100vw - 80px)
-    margin-right: 40px
-    margin-left: 40px
 
   > section:nth-child(1)
-    flex: 1 0 805px
-    margin: 0 15px 0 0
-  
-    +min 
+    flex: 0 0 805px 
+    margin: 0 15px 0 0 
+
+    +medium
       flex: 1 0 100%
+      margin: 0
 
   > section:nth-child(2)
     flex: 0 0 160px
 
-    +min
+    +medium
       flex: 1 0 100%
+
+  +medium
+    width: calc(100vw - 80px)
+    margin-right: 40px
+    margin-left: 40px
 
 
 /* Main Feed Positioning */
@@ -50,13 +52,18 @@
       +min
         margin: 15px
 
-    +min
+    +medium
       flex: 1 0 100%
-      height: initial
       padding: 0
+
+    +min
+      height: initial
 
   > article:nth-child(odd)
     flex: 1 0 500px
+    
+    +medium
+      flex: 1 0 calc(70% - 10px)
 
     +min
       flex: 1 0 100%
@@ -64,13 +71,16 @@
   > article:nth-child(even)
     flex: 0 0 250px
     margin: 0 0 0 15px
+    
+    +medium
+      flex: 0 0 calc(30% - 10px)
 
-    +min 
+    +min
       flex: 1 0 100%
       margin: 0 0 0 0
 
   > article:nth-child(2)
-    +min 
+    +min
       margin-top: 15px
 
   > article:nth-child(n+3)
@@ -80,7 +90,7 @@
   .quote-post
     padding 10px
 
-      p 
+    p 
       margin: 0 auto
 
     +min
@@ -113,7 +123,7 @@
     margin-bottom: 5px
     padding: 0 0 10px 0
 
-    +min
+    +medium
       padding-top: 20px
       width: 100%
 
@@ -130,11 +140,12 @@
     .image
       height: 160px
 
-    +min
+    +medium
       flex: 0 0 calc(40% - 20px)
       margin: 8px 10px 
 
-  +med
+
+  +medium
     +flxx(flex, space-between, center, nowrap)
     width: calc(100vw - 80px)
     overflow: scroll
@@ -194,6 +205,9 @@
 
     p
       font-size: $font-m 
+
+      +medium
+        font-size: 2em
 
       +min
         font-size: $font-ml
