@@ -37,7 +37,7 @@
     <header>
       <h2>Learn Like A Girl</h2>
     </header>
-    <?php get_template_part('components/feeds-learn'); ?>
+    <div id="mobile-flow"><?php get_template_part('components/feeds-learn'); ?><div>
   </section>
 </section>
 
