@@ -13,14 +13,15 @@ $j(document).ready(function() {
   		  height: "+=3px",
   		  right: "-=1.5px",
   		  top: "-=1.5px",
-  		  opacity: 0.8
+  		  opacity: 0.4
 	  	},"fast")
+	  	.delay(600)
 	  	.animate({
 	  		width: "-=3px",
 	  		height: "-=3px",
   		  right: "+=1.5px",
   		  top: "+=1.5px",
-  		  opacity: 1
+  		  opacity: 0.6
 	  	},"fast");
 
     console.log('grow end')
