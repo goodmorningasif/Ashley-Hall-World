@@ -3,9 +3,8 @@ $j = jQuery.noConflict();
 $j(document).ready(function() {
 
   // growing, shrinking buttons  
-  var grow = function() {
-    
-    var w = $j(".hover-bttn").css("width"); 
+
+  var grow = function( ) {
 
   	$j(".hover-bttn")
   	  .animate({
@@ -24,7 +23,6 @@ $j(document).ready(function() {
   		  opacity: 0.6
 	  	},"fast");
 
-    console.log('grow end')
   };
   
   setInterval(function() {
@@ -32,6 +30,10 @@ $j(document).ready(function() {
   }, 4000);
 
   // scheduled animations 
+
+  var gifSchedule = function() {
+  	
+  }
 
 
   // animations on hover, pause all other  activiyt
