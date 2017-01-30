@@ -1,1 +1,1 @@
-jQuery(document).ready(function(){console.log("Document Alive")});
+$j=jQuery.noConflict(),$j(document).ready(function(){var t=function(){$j(".hover-bttn").css("width");$j(".hover-bttn").animate({width:"+=3px",height:"+=3px",right:"-=1.5px",top:"-=1.5px",opacity:.8},"fast").animate({width:"-=3px",height:"-=3px",right:"+=1.5px",top:"+=1.5px",opacity:1},"fast"),console.log("grow end")};setInterval(function(){t()},4e3)});
