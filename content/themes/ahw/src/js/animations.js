@@ -29,11 +29,41 @@ $j(document).ready(function() {
   	grow();
   }, 4000);
 
-  // scheduled animations 
+  // scheduled animations  
 
   var gifSchedule = function() {
   	
+  	var paths = {
+  		href: window.location.href,
+      assets: 'content/themes/ahw/assets/'
+  	};
+
+  	var animations = {} 
+  	animations.violin = {
+  		still: paths.href + paths.assets + 'still-violin.gif',
+  		gifs: paths.href + paths.assets + 'gif-violin.gif'
+  	}
+  	animations.bball = {
+  		still: paths.href + paths.assets + 'still-bball.gif',
+  		gifs: paths.href + paths.assets + 'gif-bball.gif'
+  	}
+  	animations.swimmer = {
+  		still: paths.href + paths.assets + 'still-swimmer.gif',
+  		gifs: paths.href + paths.assets + 'gif-swimmer.gif'
+  	}
+    animations.watercan = {
+  		still: paths.href + paths.assets + 'still-watercan.gif',
+  		gifs: paths.href + paths.assets + 'gif-watercan.gif'
+    }
+  	animations.bear =  {
+  		still: paths.href + paths.assets + 'still-bear.gif',
+  		gifs: paths.href + paths.assets + 'gif-bear.gif'
+  	}
+
+
+  // loop through 
   }
+
 
 
   // animations on hover, pause all other  activiyt
