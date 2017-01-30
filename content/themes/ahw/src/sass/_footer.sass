@@ -17,19 +17,32 @@ footer
       margin: 0 auto
       width: 450px
 
+      +min
+        width: 100%
+
   section
     +flxx
 
     #footer--social
       flex: 0 0 auto
 
+      +medium
+        flex: 1 0 100%
+
     #footer--copyright
       flex: 0 0 auto
+
+      +medium
+        flex: 1 0 100%
 
 
 #logo-footer
   width: 250px
   margin: auto
+
+
+#footer--fineprint
+  padding-top: 20px
 
 #footer--social
 
@@ -39,6 +52,7 @@ footer
 
     svg 
       height: 20px 
+
 
 #footer--copyright
 
@@ -78,6 +92,14 @@ footer
   font-size: $font-ms
   text-transform: uppercase
   letter-spacing: 0.1em
+
+#footer--social
+  +medium
+    text-align: center
+
+#footer--copyright
+  +medium
+    text-align: center
 
 .contact 
   border-left: 2px solid $site-grey
