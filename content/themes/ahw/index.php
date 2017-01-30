@@ -22,13 +22,11 @@
   <?php get_template_part('components/discovery-map'); ?>
 </section>
 
-
+<!-- ====  Section: Feeds  ==== -->
 <header id="pre-feeds">
   <h2>A Day In The Life...</h2>
 </header>
 
-
-<!-- ====  Section: Feeds  ==== -->
 <section id="feeds">
   <section id="feeds--main">
     <?php get_template_part('components/feeds-main'); ?>

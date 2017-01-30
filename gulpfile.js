@@ -45,7 +45,7 @@ gulp.task('move', function() {
 // Uglify JS
 gulp.task('uglify', function() {
 	gulp.src(paths.js)
-		.pipe(concat('bhd-min.js'))
+		.pipe(concat('scripts-min.js'))
 	  .pipe(uglify())
 	  .pipe(gulp.dest(paths.dest));
 });

@@ -5,7 +5,6 @@
 
 
 	/* Add Styles, Fonts, and Javascript */
-  wp_enqueue_scripts();
 
 	function my_enqueue_style() {
 
@@ -13,13 +12,13 @@
 	  wp_enqueue_style('cloud.typography', 'https://cloud.typography.com/778678/6993372/css/fonts.css');
 		wp_enqueue_style('styles', $GLOBALS['url'].'/prod/styles.css');
 
-		add_theme_support( 'post-thumbnails' );
+		wp_enqueue_script('scripts-min', $GLOBALS['url'].'/prod/scripts-min.js', array('jquery'), '1.0.0', true);
 
   }
 
   add_action( 'wp_enqueue_scripts', 'my_enqueue_style' );
 
-  add_theme_support( 'post-thumbnails' );
+  // add_theme_support( 'post-thumbnails' );
 
   add_action('get_header', 'remove_admin_login_header');
 
