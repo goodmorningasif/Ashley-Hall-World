@@ -141,12 +141,14 @@
       height: 160px
 
     +medium
-      flex: 0 0 calc(40% - 20px)
+      flex: 0 0 calc(30% - 20px)
       margin: 8px 10px 
-
+    
+    +min
+      flex: 0 0 calc(35% - 20px) 
 
   +medium
-    +flxx(flex, space-between, center, nowrap)
+    +flxx(flex, flex-start, center, nowrap)
     width: calc(100vw - 80px)
     overflow: scroll
 
