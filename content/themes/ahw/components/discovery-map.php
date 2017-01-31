@@ -1,6 +1,6 @@
   <header>
     <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
-    <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?></div>
+    <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer-2.svg"); ?></div>
     <div id="logo-seal"></div>
   </header>
   
