@@ -2,6 +2,7 @@
 
 	/* Define Variables  */
 	$GLOBALS['url'] = get_template_directory_uri();
+	
 
 
 	/* Add Styles, Fonts, and Javascript */
