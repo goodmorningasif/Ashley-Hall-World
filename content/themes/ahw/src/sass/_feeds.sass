@@ -239,6 +239,29 @@
   width: 100%
   height: 260px
 
+/* popup video positioning */
+
+.video-popup
+  position: relative;
+  padding-bottom: 1%
+  height: 0
+  overflow: hidden
+  max-width: 100%
+  height: 400px
+
+  +min
+    margin: 15px
+
+
+.video-popup iframe,
+.video-popup object,
+.video-popup embed
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 400px
+
 
 /* Standard Label style */
 .label
