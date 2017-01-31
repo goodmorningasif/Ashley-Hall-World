@@ -1,42 +1,10 @@
 $j = jQuery.noConflict();
 
-$j(document).ready(function() {
-
-  // growing, shrinking buttons  
-
-  var grow = function( ) {
-
-  	$j('.hover-bttn')
-  	  .animate({
-  		  width: '+=3px',
-  		  height: '+=3px',
-  		  right: '-=1.5px',
-  		  top: '-=1.5px',
-  		  opacity: 0.4
-	  	},'fast')
-	  	.delay(600)
-	  	.animate({
-	  		width: '-=3px',
-	  		height: '-=3px',
-  		  right: '+=1.5px',
-  		  top: '+=1.5px',
-  		  opacity: 0.6
-	  	},'fast');
-
-  };
-  
-  setInterval(function() {
-  	grow();
-  }, 4000);
+$j( document ).ready(function() {
 
   /**
-  * GIF SCHEDULER
-  * 
-  * Recursive function loops through array of gifs objects
-  * and swaps out still images with animated gifs.
+  * Define Variables 
   */
-
-  // Define variables
 
 	var paths = { href: window.location.href, assets: 'content/themes/ahw/assets/' };
 	var animations = [ 
@@ -71,12 +39,52 @@ $j(document).ready(function() {
 		}
 	];
 
+  /**
+  * GIF SCHEDULER
+  * 
+  * Recursive function loops through array of gifs objects
+  * and swaps out still images with animated gifs.
+  */
+
+  var grow = function( ) {
+
+  	$j('.hover-bttn')
+  	  .animate({
+  		  width: '+=3px',
+  		  height: '+=3px',
+  		  right: '-=1.5px',
+  		  top: '-=1.5px',
+  		  opacity: 0.4
+	  	},'fast')
+	  	.delay(600)
+	  	.animate({
+	  		width: '-=3px',
+	  		height: '-=3px',
+  		  right: '+=1.5px',
+  		  top: '+=1.5px',
+  		  opacity: 0.6
+	  	},'fast');
+
+  };
+  
+  setInterval(function() {
+  	grow();
+  }, 4000);
+
+  /**
+  * GIF SCHEDULER
+  * 
+  * Recursive function loops through array of gifs objects
+  * and swaps out still images with animated gifs.
+  */
+
+
 	// Swapper function
 	var srcSwapper = function(counter, timer){
 
-    $j('#' + animations[counter].id).attr('src', animations[counter].gifs);
+    $j('#' + animations[counter].id)
+      .attr('src', animations[counter].gifs);
 
-    console.log('currently animating ', counter, ' ', animations[counter].id, ', at ', timer, 'ms');
     animationScheduler(++counter, timer)
 	};
 
@@ -89,12 +97,13 @@ $j(document).ready(function() {
     	animationScheduler(0, 5000);
     	return;
     }
+
     // recursive case -> swap out still for gif, call itself
     setTimeout(srcSwapper.bind(null, counter, timer), timer)
   }
 
-  // Initiate function
 
+  // Initiate function
   animationScheduler(0, 5000);
 	
 
@@ -113,7 +122,7 @@ $j(document).ready(function() {
     	if (animations[key].id === current) {
        
         $j( '#' + current ).attr('src', animations[key].gifs);
-    		console.log('currently hovering over ', $j(this).attr('id'));
+    		// console.log('currently hovering over ', $j(this).attr('id'));
     	}
     }
   });
