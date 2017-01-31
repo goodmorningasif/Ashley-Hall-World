@@ -11,13 +11,13 @@
   <div id="subhead-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-3.svg"); ?></div>
 
   <!-- GIFs -->
-  <img id="violin" src="<?php echo $GLOBALS['url']."/assets/still-violin.gif"; ?>" alt="violin" />
-  <img id="bball" src="<?php echo $GLOBALS['url']."/assets/still-bball.gif"; ?>" alt="basket ball" />
-  <img id="gate1" src="<?php echo $GLOBALS['url']."/assets/still-gate.gif"; ?>" alt="gate" />
-  <img id="gate2" src="<?php echo $GLOBALS['url']."/assets/still-gate2.gif"; ?>" alt="gate" />
-  <img id="swimmer" src="<?php echo $GLOBALS['url']."/assets/still-swimmer.gif"; ?>" alt="swimmer" />
-  <img id="watercan" src="<?php echo $GLOBALS['url']."/assets/still-watercan.gif"; ?>" alt="watercan" />
-  <img id="bear" src="<?php echo $GLOBALS['url']."/assets/still-bear.gif"; ?>" alt="bear" />
+  <img class="gifs" id="violin" src="<?php echo $GLOBALS['url']."/assets/still-violin.gif"; ?>" alt="violin" />
+  <img class="gifs" id="bball" src="<?php echo $GLOBALS['url']."/assets/still-bball.gif"; ?>" alt="basket ball" />
+  <img class="gifs" id="gate1" src="<?php echo $GLOBALS['url']."/assets/still-gate.gif"; ?>" alt="gate" />
+  <img class="gifs" id="gate2" src="<?php echo $GLOBALS['url']."/assets/still-gate2.gif"; ?>" alt="gate" />
+  <img class="gifs" id="swimmer" src="<?php echo $GLOBALS['url']."/assets/still-swimmer.gif"; ?>" alt="swimmer" />
+  <img class="gifs" id="watercan" src="<?php echo $GLOBALS['url']."/assets/still-watercan.gif"; ?>" alt="watercan" />
+  <img class="gifs" id="bear" src="<?php echo $GLOBALS['url']."/assets/still-bear.gif"; ?>" alt="bear" />
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>

@@ -76,8 +76,8 @@ $j(document).ready(function() {
 
     $j('#' + animations[counter].id).attr('src', animations[counter].gifs);
 
-    console.log(counter);
-    animationScheduler(++counter, timer+=1000)
+    console.log('currently animating ', counter, ' ', animations[counter].id, ', at ', timer, 'ms');
+    animationScheduler(++counter, timer)
 	};
 
  
@@ -86,7 +86,7 @@ $j(document).ready(function() {
   
     // base case -> if counter is greater than array lenth, restart animation
     if (counter >= animations.length) {
-    	animationScheduler(0, 1000);
+    	animationScheduler(0, 5000);
     	return;
     }
     // recursive case -> swap out still for gif, call itself
@@ -95,7 +95,7 @@ $j(document).ready(function() {
 
   // Initiate function
 
-  animationScheduler(0, 1000);
+  animationScheduler(0, 5000);
 	
 
 
@@ -105,6 +105,18 @@ $j(document).ready(function() {
   * Activates animation on hover
   */
    
+  $j( '.gifs' ).hover(function(){
+    
+    var current = $j(this).attr('id');
+
+    for (var key in animations) {
+    	if (animations[key].id === current) {
+       
+        $j( '#' + current ).attr('src', animations[key].gifs);
+    		console.log('currently hovering over ', $j(this).attr('id'));
+    	}
+    }
+  });
 
 });
 
