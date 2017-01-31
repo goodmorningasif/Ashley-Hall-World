@@ -39,6 +39,8 @@ $j( document ).ready(function() {
 		}
 	];
 
+
+
   /**
   * GIF SCHEDULER
   * 
@@ -71,17 +73,21 @@ $j( document ).ready(function() {
   	grow();
   }, 4000);
 
+
+
   /**
   * GIF SCHEDULER
   * 
   * Recursive function loops through array of gifs objects
   * and swaps out still images with animated gifs.
+  * Current version only points back to the same image, 
+  * which restarts the gif. 
   */
 
 
 	// Swapper function
 	var srcSwapper = function(counter, timer){
-
+    
     $j('#' + animations[counter].id)
       .attr('src', animations[counter].gifs);
 
@@ -98,13 +104,13 @@ $j( document ).ready(function() {
     	return;
     }
 
-    // recursive case -> swap out still for gif, call itself
+    // recursive case -> go to swapper function
     setTimeout(srcSwapper.bind(null, counter, timer), timer)
   }
 
 
   // Initiate function
-  animationScheduler(0, 5000);
+  animationScheduler(0, 8000);
 	
 
 
