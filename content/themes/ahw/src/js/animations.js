@@ -6,22 +6,22 @@ $j(document).ready(function() {
 
   var grow = function( ) {
 
-  	$j(".hover-bttn")
+  	$j('.hover-bttn')
   	  .animate({
-  		  width: "+=3px",
-  		  height: "+=3px",
-  		  right: "-=1.5px",
-  		  top: "-=1.5px",
+  		  width: '+=3px',
+  		  height: '+=3px',
+  		  right: '-=1.5px',
+  		  top: '-=1.5px',
   		  opacity: 0.4
-	  	},"fast")
+	  	},'fast')
 	  	.delay(600)
 	  	.animate({
-	  		width: "-=3px",
-	  		height: "-=3px",
-  		  right: "+=1.5px",
-  		  top: "+=1.5px",
+	  		width: '-=3px',
+	  		height: '-=3px',
+  		  right: '+=1.5px',
+  		  top: '+=1.5px',
   		  opacity: 0.6
-	  	},"fast");
+	  	},'fast');
 
   };
   
@@ -29,44 +29,82 @@ $j(document).ready(function() {
   	grow();
   }, 4000);
 
-  // scheduled animations  
+  /**
+  * GIF SCHEDULER
+  * 
+  * Recursive function loops through array of gifs objects
+  * and swaps out still images with animated gifs.
+  */
 
-  var gifSchedule = function() {
-  	
-  	var paths = {
-  		href: window.location.href,
-      assets: 'content/themes/ahw/assets/'
-  	};
+  // Define variables
 
-  	var animations = {} 
-  	animations.violin = {
-  		still: paths.href + paths.assets + 'still-violin.gif',
-  		gifs: paths.href + paths.assets + 'gif-violin.gif'
-  	}
-  	animations.bball = {
-  		still: paths.href + paths.assets + 'still-bball.gif',
-  		gifs: paths.href + paths.assets + 'gif-bball.gif'
-  	}
-  	animations.swimmer = {
-  		still: paths.href + paths.assets + 'still-swimmer.gif',
-  		gifs: paths.href + paths.assets + 'gif-swimmer.gif'
-  	}
-    animations.watercan = {
-  		still: paths.href + paths.assets + 'still-watercan.gif',
-  		gifs: paths.href + paths.assets + 'gif-watercan.gif'
+	var paths = { href: window.location.href, assets: 'content/themes/ahw/assets/' };
+	var animations = [ 
+		{
+			still: paths.href + paths.assets + 'still-violin.gif',
+			gifs: paths.href + paths.assets + 'gif-violin.gif',
+			id: "violin"
+		}, {
+			still: paths.href + paths.assets + 'still-bball.gif',
+			gifs: paths.href + paths.assets + 'gif-bball.gif',
+			id: "bball"
+		}, {
+			still: paths.href + paths.assets + 'still-gate.gif',
+			gifs: paths.href + paths.assets + 'gif-gate.gif',
+			id: "gate1"
+		}, {
+			still: paths.href + paths.assets + 'still-swimmer.gif',
+			gifs: paths.href + paths.assets + 'gif-swimmer.gif',
+			id: "swimmer"
+		}, {
+			still: paths.href + paths.assets + 'still-watercan.gif',
+			gifs: paths.href + paths.assets + 'gif-watercan.gif',
+			id: "watercan"
+	  }, {
+			still: paths.href + paths.assets + 'still-bear.gif',
+			gifs: paths.href + paths.assets + 'gif-bear.gif',
+			id: "bear"
+		}, {
+			still: paths.href + paths.assets + 'still-gate2.gif',
+			gifs: paths.href + paths.assets + 'gif-gate2.gif',
+			id: "gate2"
+		}
+	];
+
+	// Swapper function
+	var srcSwapper = function(counter, timer){
+
+    $j('#' + animations[counter].id).attr('src', animations[counter].gifs);
+
+    console.log(counter);
+    animationScheduler(++counter, timer+=1000)
+	};
+
+ 
+  // Scheduler function
+  var animationScheduler = function(counter, timer) {
+  
+    // base case -> if counter is greater than array lenth, restart animation
+    if (counter >= animations.length) {
+    	animationScheduler(0, 1000);
+    	return;
     }
-  	animations.bear =  {
-  		still: paths.href + paths.assets + 'still-bear.gif',
-  		gifs: paths.href + paths.assets + 'gif-bear.gif'
-  	}
-
-
-  // loop through 
+    // recursive case -> swap out still for gif, call itself
+    setTimeout(srcSwapper.bind(null, counter, timer), timer)
   }
 
+  // Initiate function
+
+  animationScheduler(0, 1000);
+	
 
 
-  // animations on hover, pause all other  activiyt
+  /**
+  * HOVER ANIMIATION
+  * 
+  * Activates animation on hover
+  */
+   
 
 });
 
