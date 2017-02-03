@@ -38,7 +38,7 @@
         style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php include(locate_template('components/content.php')); //see header notes ?>
+          <?php include(locate_template('components/content-main.php')); //see header notes ?>
         </div>
       </article>
     
@@ -47,11 +47,33 @@
       <article class="quote-post" id="main-<?php echo $count; ?>">
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php if ( $count%2 !== 0 ) { ?>
-            <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
-          <?php } else { ?>
-            <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
-          <?php } ?>
+          <?php if ( $GLOBALS["width"] ) { ?>
+            <?php if ( intval($GLOBALS["width"]) > 1280) { ?>
+
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
+              <?php } ?>
+
+            <?php } elseif (intval($GLOBALS["width"]) <= 1280 && intval($GLOBALS["width"]) > 800 )  { ?>
+
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
+              <?php } ?>
+
+            <?php } elseif (intval($GLOBALS["width"]) <= 800 )  { ?>
+
+              <?php if ( $count%2 !== 0 ) { ?>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
+              <?php } else { ?>
+                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
+              <?php } ?>
+              
+            <?php } ?> 
+          <?php } ?> 
           <span class="cta">
             <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
               <?php echo $cta; ?>
@@ -66,7 +88,7 @@
         <div class="video"><?php echo the_field('video_link'); ?></div>
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php include(locate_template('components/content.php')); //see header notes ?>
+          <?php include(locate_template('components/content-main.php')); //see header notes ?>
         </div>
       </article>
     <?php } ?>

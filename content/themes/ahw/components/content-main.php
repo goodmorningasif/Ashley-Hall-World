@@ -18,7 +18,7 @@
       <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
     <?php } ?>
 
-  <?php } elseif (intval($GLOBALS["width"]) <= 1280 )  { ?>
+  <?php } elseif (intval($GLOBALS["width"]) <= 1280 && intval($GLOBALS["width"]) > 800 )  { ?>
 
     <?php if ( $count%2 !== 0 ) { ?>
       <?php if ( intval($GLOBALS["width"]) > 1100 ) { ?>
@@ -40,8 +40,8 @@
 
   <?php } elseif (intval($GLOBALS["width"]) <= 800 )  { ?>
 
-    <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
-    <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
+    <h3><?php echo mb_strimwidth(get_the_title(), 0, 20, '...'); ?></h3>
+    <p><?php echo mb_strimwidth(get_the_content(), 0, 100, '...'); ?></p>
 
   <?php } ?>
 <?php } ?>
