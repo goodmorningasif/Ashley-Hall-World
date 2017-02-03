@@ -3,21 +3,13 @@
   * the Loop => for Main Feed
   */
 
-  // require $_SERVER['DOCUMENT_ROOT'].'/Ashley-Hall-World/mustache/src/Mustache/Autoloader.php';
-  // Mustache_autoloader::register(); 
-  
-  // $m = new Mustache_Engine;
-
-
-
   $count = 0;
   if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 
   /** 
   * Variables 
   */
-
-
+  
   $feed = get_field('feed_selection') ?: '';
   $type = get_field('post_type') ?: '';
   $subtitle = get_field('subtitle') ?: '';

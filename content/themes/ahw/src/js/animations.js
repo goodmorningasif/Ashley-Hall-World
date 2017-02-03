@@ -1,3 +1,9 @@
+/**
+* Animations
+* 
+* For site animations & transformations
+*/
+
 $j = jQuery.noConflict();
 
 $j( document ).ready(function() {

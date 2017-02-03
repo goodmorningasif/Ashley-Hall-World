@@ -6,6 +6,12 @@
 // Open popup
 $j( '.hover-bttn' ).click(function(e){
 	e.preventDefault();
+
+  // isolate id
+  var video = $j(this).attr('id');
+  // create cookie
+  document.cookie = "video=" + video;
+   
   $j( '#popup-overlay' ).fadeIn("slow",function(){
     $j( '#map-popup' ).fadeIn("slow", function(){
       
