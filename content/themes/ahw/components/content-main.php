@@ -1,6 +1,6 @@
 <?php
   /** 
-  * Feeds-main => for content section
+  * Feeds-main => for content section for images and video
   *
   * NOTE: use inlcude(locate_template( 'file.php' )) 
   * instead of get_template_file( 'file.php' ) to pass
@@ -40,7 +40,7 @@
 
   <?php } elseif (intval($GLOBALS["width"]) <= 800 )  { ?>
 
-    <h3><?php echo mb_strimwidth(get_the_title(), 0, 20, '...'); ?></h3>
+    <h3><?php echo mb_strimwidth(get_the_title(), 0, 25, '...'); ?></h3>
     <p><?php echo mb_strimwidth(get_the_content(), 0, 100, '...'); ?></p>
 
   <?php } ?>

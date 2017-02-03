@@ -47,33 +47,7 @@
       <article class="quote-post" id="main-<?php echo $count; ?>">
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php if ( $GLOBALS["width"] ) { ?>
-            <?php if ( intval($GLOBALS["width"]) > 1280) { ?>
-
-              <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
-              <?php } else { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
-              <?php } ?>
-
-            <?php } elseif (intval($GLOBALS["width"]) <= 1280 && intval($GLOBALS["width"]) > 800 )  { ?>
-
-              <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
-              <?php } else { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
-              <?php } ?>
-
-            <?php } elseif (intval($GLOBALS["width"]) <= 800 )  { ?>
-
-              <?php if ( $count%2 !== 0 ) { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 150, '...'); ?></p>
-              <?php } else { ?>
-                <p><?php echo mb_strimwidth(get_the_content(), 0, 80, '...'); ?></p>
-              <?php } ?>
-              
-            <?php } ?> 
-          <?php } ?> 
+          <?php include(locate_template('components/content-quote.php')); //see header notes ?>  
           <span class="cta">
             <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
               <?php echo $cta; ?>
