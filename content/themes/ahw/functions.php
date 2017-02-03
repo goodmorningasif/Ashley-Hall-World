@@ -2,6 +2,9 @@
 
 	/* Define Variables  */
 	$GLOBALS['url'] = get_template_directory_uri();
+	if ($_COOKIE["width"]) {
+		$GLOBALS['width'] = $_COOKIE["ahwWidth"];
+	}
 	
 
 

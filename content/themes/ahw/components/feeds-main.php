@@ -3,11 +3,11 @@
   * the Loop => for Main Feed
   */
 
-  require $_SERVER['DOCUMENT_ROOT'].'/Ashley-Hall-World/mustache/src/Mustache/Autoloader.php';
-  Mustache_autoloader::register(); 
+  // require $_SERVER['DOCUMENT_ROOT'].'/Ashley-Hall-World/mustache/src/Mustache/Autoloader.php';
+  // Mustache_autoloader::register(); 
   
-  $m = new Mustache_Engine;
-  // echo $m->render('Hello, {{planet}}!', array('planet' => 'World'));
+  // $m = new Mustache_Engine;
+
 
 
   $count = 0;
@@ -38,13 +38,15 @@
         style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php if ( $count%2 !== 0 ) { ?>
-            <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
-            <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
-          <?php } else { ?>
-            <h3><?php echo mb_strimwidth(get_the_title(), 0, 14, '...'); ?></h3>
-            <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
-          <?php } ?>
+          <?php if ( $GLOBALS["width"] ){ ?>
+            <?php if ( $count%2 !== 0 && intval($GLOBALS["width"]) > 1280  ) { ?>
+              <h3><?php echo mb_strimwidth(get_the_title(), 0, 35, '...'); ?></h3>
+              <p><?php echo mb_strimwidth(get_the_content(), 0, 140, '...'); ?></p>
+            <?php } else { ?>
+              <h3><?php echo mb_strimwidth(get_the_title(), 0, 14, '...'); ?></h3>
+              <p><?php echo mb_strimwidth(get_the_content(), 0, 50, '...'); ?></p>
+            <?php } ?>
+            <?php } ?>
         </div>
       </article>
     

@@ -8,7 +8,8 @@ $j( document ).ready(function() {
 
 
 	// make cookie 
-	document.cookie = "width=" + values.width + ";height=" + values.height;
+	document.cookie = "ahwWidth=" + values.width;
+	document.cookie = "ahwHeight=" + values.height;
 	console.log("cookie set");
 
 });
