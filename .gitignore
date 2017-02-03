@@ -63,3 +63,5 @@ content/cache/
 content/uploads/
 content/upgrade/
 content/wp-cache-config.php
+
+/vendor/

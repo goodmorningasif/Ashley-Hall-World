@@ -1,8 +1,15 @@
 <?php
   /** 
   * the Loop => for Main Feed
-  */ 
+  */
+
+  require $_SERVER['DOCUMENT_ROOT'].'/Ashley-Hall-World/mustache/src/Mustache/Autoloader.php';
+  Mustache_autoloader::register(); 
   
+  $m = new Mustache_Engine;
+  // echo $m->render('Hello, {{planet}}!', array('planet' => 'World'));
+
+
   $count = 0;
   if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 

@@ -1,0 +1,12 @@
+{
+    "name": "sdco1/ashley-hall-world",
+    "authors": [
+        {
+            "name": "Asif Ahmed",
+            "email": "asif@stitchdesignco.com"
+        }
+    ],
+    "require": {
+    	"mustache/mustache": "~2.5"
+    }
+}
