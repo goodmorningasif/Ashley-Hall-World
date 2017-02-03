@@ -1,4 +1,16 @@
 <?php
+/** 
+ * Functions
+ *
+ * Smart functions for ahw
+ *
+ * @link https://github.com/sdco-partners/Ashley-Hall-World
+ *
+ * @package WordPress
+ * @subpackage ahw
+ * @since 1.0
+ * @version 1.0
+ */
 
 	/* Define Variables  */
 	$GLOBALS['url'] = get_template_directory_uri();

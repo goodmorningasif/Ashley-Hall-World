@@ -4,10 +4,10 @@
  *
  * The main template file
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://github.com/sdco-partners/Ashley-Hall-Worldd
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage ahw
  * @since 1.0
  * @version 1.0
  */

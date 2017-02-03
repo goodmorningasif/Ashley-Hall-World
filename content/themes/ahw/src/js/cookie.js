@@ -4,13 +4,10 @@ $j( document ).ready(function() {
 	values.width = $j( window ).width();
 	values.height = $j( window ).height();
 	values.expire = 0;
-	values 
 
 
-	// make cookie 
+	// make cookie  
 	document.cookie = "ahwWidth=" + values.width;
-	document.cookie = "ahwHeight=" + values.height;
-	console.log("cookie set");
 
 });
 
