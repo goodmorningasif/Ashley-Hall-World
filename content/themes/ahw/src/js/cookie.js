@@ -6,24 +6,24 @@
 * client-side events that PHP cannot track.
 */
 
-$j( document ).ready(function() {
+// $j( document ).ready(function() {
 
-	/**
-	* Window height cookie
-	*/
+// 	/**
+// 	* Window height cookie
+// 	*/
 
-	// Measure screen  
-	var values = {}
-	values.width = $j( window ).width();
-	values.expire = -1;
+// 	// Measure screen  
+// 	var values = {}
+// 	values.width = $j( window ).width();
+// 	values.expire = -1;
 
  
-	// Share Variable  
-	document.cookie = "browser=" + values.width;
+// 	// Share Variable  
+// 	document.cookie = "browser=" + values.width;
 
-  /**
-	* Window height cookie
-	*/
+//   /**
+// 	* Window height cookie
+// 	*/
 
 
-});
+// });

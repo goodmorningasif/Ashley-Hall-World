@@ -1,4 +1,4 @@
-/*  _feed.sass */
+1/*  _feed.sass */
 
 
 /* PAGE CONTEXT -> For positioning items */
@@ -29,9 +29,9 @@
       flex: 1 0 100%
 
   +medium
-    width: calc(100vw - 80px)
-    margin-right: 40px
-    margin-left: 40px
+    width: calc(100vw - 40px)
+    margin-right: 20px
+    margin-left: 20px
 
 
 /* Main Feed Positioning */
@@ -44,7 +44,18 @@
     padding: 10px
 
     .content
-      padding: 15px 40px 0 40px 
+      padding: 15px 40px 30px 40px 
+
+      h3
+        max-height: 1em
+        overflow: hidden  
+
+      p
+        max-height: 0.3em
+        overflow: hidden  
+
+      +medium
+        flex: 0 0 100%
 
     .image
       height: 260px
@@ -88,15 +99,23 @@
 
 
   .quote-post
-    padding 10px
+    +flxx(flex, center, center, wrap)
 
     p 
+      width: 80%
       margin: 0 auto
 
-    +min
-      padding-bottom: 40px
+    // +min
+    //   padding-bottom: 40px
 
   .quote-post:nth-child(odd)
+
+    > .content
+    
+      p 
+        max-height: 7.5em
+        margin-bottom: 20px
+        overflow: hidden  
     p 
       padding: 30px 100px 15px 100px
 
@@ -104,6 +123,14 @@
         padding: 30px 40px 15px 40px
 
   .quote-post:nth-child(even)
+
+    > .content
+
+      p 
+        max-height: 9em
+        margin-bottom: 10px
+        overflow: hidden  
+
     p 
       padding: 30px 0 15px 0
 
@@ -127,6 +154,27 @@
       padding-top: 20px
       width: 100%
 
+.image-post 
+
+  > .content
+    
+    h3
+      max-height: 1em
+      overflow: hidden
+
+    p
+      max-height: 1.8em
+      overflow: hidden
+
+.quote-post
+
+  > .content
+
+    p
+      max-height: 7.8em
+      overflow: hidden
+      margin-bottom: 10px
+
 
 #mobile-flow
   > article
@@ -147,7 +195,7 @@
 
   +medium
     +flxx(flex, flex-start, center, nowrap)
-    width: calc(100vw - 80px)
+    width: calc(100vw - 40px)
     overflow: scroll
 
 
@@ -170,6 +218,7 @@
 
   p 
     padding: 10px 0 30px 0
+
 
 /* Label positioning */
 .label
@@ -220,6 +269,8 @@
     a:hover
       color: $site-purple
       border-bottom: 2px solid $site-purple
+
+
 
 
 /* Embedded video positioning */
@@ -305,7 +356,7 @@
       letter-spacing: 0.05em
       line-height: 1.2em
       text-transform: uppercase
-      color: $site-purple 
+      color: $site-purple
 
     a:link
       color: $site-grey

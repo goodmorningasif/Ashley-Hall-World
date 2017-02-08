@@ -18,6 +18,9 @@
   <img class="gifs" id="swimmer" src="<?php echo $GLOBALS['url']."/assets/still-swimmer.gif"; ?>" alt="swimmer" />
   <img class="gifs" id="watercan" src="<?php echo $GLOBALS['url']."/assets/still-watercan.gif"; ?>" alt="watercan" />
   <img class="gifs" id="bear" src="<?php echo $GLOBALS['url']."/assets/still-bear.gif"; ?>" alt="bear" />
+  <img class="gifs" id="chalkboard" src="<?php echo $GLOBALS['url']."/assets/still-chalkboard.gif"; ?>" alt="chalkboard" />
+  <img class="gifs" id="swings" src="<?php echo $GLOBALS['url']."/assets/still-swings.gif"; ?>" alt="swings" />
+  <img class="gifs" id="flags" src="<?php echo $GLOBALS['url']."/assets/still-flags.gif"; ?>" alt="flags" />
   
   <!-- Buttons -->
   <div class="hover-bttn" id="ingram"><?php echo file_get_contents($GLOBALS['url']."/assets/hover-bttn.svg"); ?></div>

@@ -38,7 +38,11 @@ footer
 
 #logo-footer
   width: 250px
-  margin: auto
+  margin: 0 auto
+
+  +min 
+    width: 150px
+    margin 0 auto 10px
 
 
 #footer--fineprint
@@ -53,6 +57,9 @@ footer
     svg 
       height: 20px 
 
+  +min 
+    margin-bottom: 50px
+
 
 #footer--copyright
 
@@ -65,6 +72,10 @@ footer
   vertical-align: top
   margin-top: 5px
   padding-left: 20px 
+
+  +min
+    display: block !important;
+
 
 
 
@@ -103,4 +114,7 @@ footer
 
 .contact 
   border-left: 2px solid $site-grey
+
+  +min
+    border-left: none
 

@@ -30,7 +30,8 @@
         style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php include(locate_template('components/content-main.php')); //see header notes ?>
+          <h3><?php echo get_the_title(); ?></h3>
+          <p><?php echo get_the_content(); ?></p>
         </div>
       </article>
     
@@ -39,7 +40,7 @@
       <article class="quote-post" id="main-<?php echo $count; ?>">
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php include(locate_template('components/content-quote.php')); //see header notes ?>  
+          <p><?php echo get_the_content(); ?></p>
           <span class="cta">
             <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
               <?php echo $cta; ?>
@@ -54,7 +55,8 @@
         <div class="video"><?php echo the_field('video_link'); ?></div>
         <div class="content">
           <span class="label"><?php echo $subtitle; ?></span>
-          <?php include(locate_template('components/content-main.php')); //see header notes ?>
+          <h3><?php echo get_the_title(); ?></h3>
+          <p><?php echo get_the_content(); ?></p>
         </div>
       </article>
     <?php } ?>

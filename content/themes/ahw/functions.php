@@ -15,10 +15,6 @@
 	/* Define Variables  */
 	$GLOBALS['url'] = get_template_directory_uri();
 
-	if ($_COOKIE["width"]) {
-		$GLOBALS['width'] = $_COOKIE["browser"];
-	}
-	
 
 
 	/* Add Styles, Fonts, and Javascript */

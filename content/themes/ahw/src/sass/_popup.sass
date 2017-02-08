@@ -6,7 +6,7 @@
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
 /* Popup Video */
-#map-popup 
+.map-popup 
   display: none
   position: fixed
   top: calc(50% - 250px)
@@ -30,18 +30,37 @@
       display: inline-block
       margin: 4px 0 0 0
 
+    +medium
+      padding: 25px 40px
+  
+    +min
+      padding: 25px 10%
+
+  > .video-popup
+
+    +min 
+      height: 400px
+      margin: 10% 10% 0 10%
+  
+  +min
+    width: calc(100vw - 20px)
+    height: 100vh
+    top: 0
+    right: 0
+    padding-top: 0
+
+
 .close-bttn
   position: absolute
   top: -40px
   right: -40px
   width: 25px
 
-#ex
-  fill: $site-white
-
-  &:hover
-    fill: $site-litePurple
-
+  +min
+    position: absolute
+    top: 10px
+    right: 10px
+    padding: 30px
 
 #popup-overlay
   display: none
@@ -57,8 +76,12 @@
 /* Includes cosmetic styles like color, typography, and borders */
 /* INCEPTION RULE: DO NOT nest more than 4  */
 
-#map-popup
+.map-popup
   background-color: $site-white
+
+  +min 
+    background-color: $site-black
+    opacity: 0.8
 
 .close-bttn
   // transform: rotate(45deg);
@@ -66,3 +89,12 @@
 #popup-overlay
   background-color: $site-grey
   opacity: 0.8
+
+#ex
+  fill: $site-white
+
+  &:hover
+    fill: $site-litePurple
+
+  +min
+    fill: $site-purple

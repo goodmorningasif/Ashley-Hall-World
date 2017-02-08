@@ -10,11 +10,9 @@ $j( '.hover-bttn' ).click(function(e){
   // isolate id
   var video = $j(this).attr('id');
   // create cookie
-  document.cookie = "video=" + video;
-   
+
   $j( '#popup-overlay' ).fadeIn("slow",function(){
-    $j( '#map-popup' ).fadeIn("slow", function(){
-      
+    $j('#' + video + '-video').fadeIn("slow", function() {
     })
   });
 
@@ -24,7 +22,8 @@ $j( '.hover-bttn' ).click(function(e){
 // Close popup
 $j( '.close-bttn' ).click(function(e){
 	e.preventDefault();
-  $j( '#map-popup' ).fadeOut("slow",function(){
+
+  $j( '.map-popup' ).fadeOut("slow",function(){
     $j( '#popup-overlay' ).fadeOut("slow", function(){
       
     })

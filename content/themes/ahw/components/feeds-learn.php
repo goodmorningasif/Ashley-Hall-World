@@ -30,8 +30,8 @@
           </div>
           <div class="content">
             <span class="label"><?php echo $subtitle; ?></span>
-            <h3><?php echo mb_strimwidth(get_the_title(), 0, 15, '...'); ?></h3>
-            <p><?php echo mb_strimwidth(get_the_content(), 0, 36, '...'); ?></p>
+            <h3><?php echo get_the_title(); ?></h3>
+            <p><?php echo get_the_content(); ?></p>
           </div>
         </article>
         
@@ -40,7 +40,7 @@
         <article class="quote-post" id="learn-<?php echo $count; ?>">
           <div class="content">
             <span class="label"><?php echo $subtitle; ?></span>
-            <p><?php echo mb_strimwidth(get_the_content(), 0, 55, '...'); ?></p>
+            <p><?php echo get_the_content(); ?></p>
             <span class="cta">
               <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
                 <?php echo $cta; ?>

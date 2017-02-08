@@ -35,14 +35,22 @@ $j( document ).ready(function() {
 			gifs: paths.href + paths.assets + 'gif-watercan.gif',
 			id: "watercan"
 	  }, {
-			still: paths.href + paths.assets + 'still-bear.gif',
-			gifs: paths.href + paths.assets + 'gif-bear.gif',
-			id: "bear"
+			still: paths.href + paths.assets + 'still-chalkboard.gif',
+			gifs: paths.href + paths.assets + 'gif-chalkboard.gif',
+			id: "chalkboard"
 		}, {
-			still: paths.href + paths.assets + 'still-gate2.gif',
-			gifs: paths.href + paths.assets + 'gif-gate2.gif',
-			id: "gate2"
-		}
+      still: paths.href + paths.assets + 'still-swings.gif',
+      gifs: paths.href + paths.assets + 'gif-swings.gif',
+      id: "swings"
+    }, {
+      still: paths.href + paths.assets + 'still-flags.gif',
+      gifs: paths.href + paths.assets + 'gif-flags.gif',
+      id: "flags"
+    }, {
+      still: paths.href + paths.assets + 'still-bear.gif',
+      gifs: paths.href + paths.assets + 'gif-bear.gif',
+      id: "bear"
+    }
 	];
 
 

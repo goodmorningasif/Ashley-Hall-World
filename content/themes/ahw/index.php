@@ -46,7 +46,6 @@
   * 
   * echo "<script>console.log('".get_field('feed_selection').", outputs feed_selection');</script>";
   */  
-  echo "<script>console.log('".$GLOBALS["width"].", outputs width');</script>";
 ?>
 
 <?php get_footer();
