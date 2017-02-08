@@ -18,9 +18,9 @@
 <footer>
   <header>
     <h2>Headline Goes Here</h2>
-    <p>sed ut perspiciatis unde omnis iste natus errpr sit volupatetem accusantium doloremque laudantium, totam rem aperiam. sed ut perspiciatis unde omnis iste natus errpr sit volupatetem accusantium doloremque laudantium, totam rem aperiam.</p>
+    <p><?php echo the_field('footer_bio', 150); ?></p>
     <div id='logo-footer'>
-      <?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?>
+      <a href="http://ashleyhall.org" target="_blank" alt="Ashley Hall"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer.svg"); ?></a>
     </div>
   </header> 
   
@@ -44,10 +44,10 @@
           </a>
         </li>
         <li class="contact">
-          Ashley Hall
+          <a href="http://www.ashleyhall.org/" target="_blank" alt="Ashley Hall">Ashley Hall</a>
         </li>
         <li class="contact">
-          Contact
+          <a href="http://www.ashleyhall.org/contact-us/" target="_blank" alt="Contact Ashley Hall">Contact</a>
         </li>
       </ul>
     </div>

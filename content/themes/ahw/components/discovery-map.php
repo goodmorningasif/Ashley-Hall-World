@@ -1,6 +1,6 @@
   <header>
-    <div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div>
-    <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer-2.svg"); ?></div>
+    <a href="http://ashleyhall.org" target="_blank" alt="Ashley Hall"><div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div></a>
+    <div id="logo-main"><a href="http://ashleyhall.org" target="_blank" alt="Ashley Hall"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer-2.svg"); ?></a></div>
     <div id="logo-seal"></div>
   </header>
   
