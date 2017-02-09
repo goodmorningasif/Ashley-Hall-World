@@ -15,6 +15,12 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 
+<script type="text/javascript">
+	document.documentElement.setAttribute("data-browser", navigator.userAgent);
+</script>
+
+<link rel="shortcut icon" href="http://www.ashleyhall.org/wp-content/themes/ashleyhall/-/img_min/favicon.ico">
+
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">

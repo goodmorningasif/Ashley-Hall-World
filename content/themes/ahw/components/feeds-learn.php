@@ -29,7 +29,7 @@
           style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover">
           </div>
           <div class="content">
-            <span class="label"><?php echo $subtitle; ?></span>
+            <a href="<?php echo $click_through; ?>" target="_blank" alt="<?php echo the_title(); ?>"><span class="label"><?php echo $subtitle; ?></span></a>
             <h3><?php echo get_the_title(); ?></h3>
             <p><?php echo get_the_content(); ?></p>
           </div>
@@ -42,7 +42,7 @@
             <span class="label"><?php echo $subtitle; ?></span>
             <p><?php echo get_the_content(); ?></p>
             <span class="cta">
-              <a href="<?php echo $click_through; ?>" alt="<?php echo the_title(); ?>">
+              <a href="<?php echo $click_through; ?>" target="_blank" alt="<?php echo the_title(); ?>">
                 <?php echo $cta; ?>
               </a>
             </span>

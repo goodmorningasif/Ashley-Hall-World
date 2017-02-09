@@ -188,6 +188,14 @@ body
   margin: 0 auto
 
 
+/* BROWSER DETECTION */
+
+=browser($browsers: Mozilla)
+  @each $browser in $browsers
+    html[data-browser*="#{$browser}"] &
+      @content
+
+
 @import 'index' 
 @import 'footer'
 

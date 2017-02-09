@@ -12,6 +12,9 @@ $j( document ).ready(function() {
   * Define Variables 
   */
 
+  var isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
+  var isEdge = !!navigator.userAgent.match(/Windows\ NT\ 10/);
+
 	var paths = { href: window.location.href, assets: 'content/themes/ahw/assets/' };
 	var animations = [ 
 		{
@@ -63,29 +66,33 @@ $j( document ).ready(function() {
   */
 
   var grow = function( ) {
-
   	$j('.hover-bttn')
   	  .animate({
-  		  width: '+=3px',
-  		  height: '+=3px',
-  		  right: '-=1.5px',
   		  top: '-=1.5px',
+        right: '-=1.5px',
+        width: '+=3px',
+        height: '+=3px',
   		  opacity: 0.4
 	  	},'fast')
 	  	.delay(600)
 	  	.animate({
-	  		width: '-=3px',
-	  		height: '-=3px',
-  		  right: '+=1.5px',
   		  top: '+=1.5px',
+        right: '+=1.5px',
+        width: '-=3px',
+        height: '-=3px',
   		  opacity: 0.6
 	  	},'fast');
 
   };
   
-  setInterval(function() {
-  	grow();
-  }, 4000);
+  if (isIE11 || isEdge) {
+    console.log("For best experience, please upgrade to a modern browser!")
+  } else {
+    setInterval(function() {
+    	grow();
+    }, 4000);
+
+  }
 
 
 

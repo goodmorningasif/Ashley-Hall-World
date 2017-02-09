@@ -47,7 +47,7 @@
       padding: 15px 40px 30px 40px 
 
       h3
-        max-height: 1em
+        max-height: 1.3em
         overflow: hidden  
 
       p
@@ -55,7 +55,7 @@
         overflow: hidden  
 
       +medium
-        flex: 0 0 100%
+        flex: 0 1 100%
 
     .image
       height: 260px
@@ -68,7 +68,7 @@
       padding: 0
 
     +min
-      height: initial
+      height: 100%
 
   > article:nth-child(odd)
     flex: 1 0 500px
@@ -113,9 +113,12 @@
     > .content
     
       p 
-        max-height: 7.5em
+        max-height: 9em
         margin-bottom: 20px
-        overflow: hidden  
+        overflow: hidden
+
+        +browser("MSIE 11")
+          max-height: 7em
     p 
       padding: 30px 0 0 0
 
@@ -129,7 +132,10 @@
       p 
         max-height: 9em
         margin-bottom: 10px
-        overflow: hidden  
+        overflow: hidden
+
+        +browser("MSIE 11")
+          max-height: 7em  
 
     p 
       padding: 30px 0 15px 0
@@ -208,10 +214,6 @@
     width: 50px
 
 .content
-  // width: 150px
-  // white-space: nowrap;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
 
   p 
     padding: 10px 0 30px 0
