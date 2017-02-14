@@ -68,18 +68,10 @@ $j( document ).ready(function() {
   var grow = function( ) {
   	$j('.hover-bttn')
   	  .animate({
-  		  top: '-=1.5px',
-        right: '-=1.5px',
-        width: '+=3px',
-        height: '+=3px',
   		  opacity: 0.4
 	  	},'fast')
 	  	.delay(600)
 	  	.animate({
-  		  top: '+=1.5px',
-        right: '+=1.5px',
-        width: '-=3px',
-        height: '-=3px',
   		  opacity: 0.6
 	  	},'fast');
 

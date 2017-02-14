@@ -26,8 +26,8 @@
 ?>
       <!-- Image Post -->
       <article class="image-post" id="main-<?php echo $count; ?>">
-        <div class="image"  
-        style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></div>
+        <a href="<?php echo $click_through; ?>" target="_blank" alt="<?php echo the_title(); ?>" class="image"  
+        style="background: #fff url('<?php echo $image['url']; ?>') no-repeat center; background-size: cover"></a>
         <div class="content">
           <a href="<?php echo $click_through; ?>" target="_blank" alt="<?php echo the_title(); ?>"><span class="label"><?php echo $subtitle; ?></span></a>
           <h3><?php echo get_the_title(); ?></h3>

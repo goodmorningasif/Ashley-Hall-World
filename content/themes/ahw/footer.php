@@ -29,17 +29,17 @@
     <div id="footer--social">
       <ul>
         <li class="social" id="twit">
-          <a href="https://www.facebook.com/ashleyhall.pqv" alt="twitter">
+          <a href="https://www.facebook.com/ashleyhall.pqv" target="_blank" alt="twitter">
             <?php echo file_get_contents($GLOBALS['url']."/assets/twit.svg"); ?>
           </a>
         </li>
         <li class="social" id="face">
-          <a href="https://twitter.com/ashleyhall_pqv" alt="facebook">
+          <a href="https://twitter.com/ashleyhall_pqv" target="_blank" alt="facebook">
             <?php echo file_get_contents($GLOBALS['url']."/assets/face.svg"); ?>
           </a>
         </li>
         <li class="social" id="insta">
-          <a href="https://instagram.com/ashleyhall_pqv/" alt="instagram">
+          <a href="https://instagram.com/ashleyhall_pqv/" target="_blank" alt="instagram">
             <?php echo file_get_contents($GLOBALS['url']."/assets/insta.svg"); ?>
           </a>
         </li>
