@@ -52,7 +52,10 @@
 
       p
         max-height: 0.3em
-        overflow: hidden  
+        overflow: hidden
+
+        @media(max-width: #{530px}) 
+          max-height: 1.5em 
 
       +medium
         flex: 0 1 100%

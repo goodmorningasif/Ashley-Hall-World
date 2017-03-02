@@ -1,12 +1,12 @@
 <header>
-  <a href="http://ashleyhall.org" target="_blank" alt="Ashley Hall"><div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div></a>
-  <div id="logo-main"><a href="http://ashleyhall.org" target="_blank" alt="Ashley Hall"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer-2.svg"); ?></a></div>
+  <a href="http://www.ashleyhall.org" target="_blank" alt="Ashley Hall"><div id="corner-link"><?php echo file_get_contents($GLOBALS['url']."/assets/corner-link.svg"); ?></div></a>
+  <div id="logo-main"><?php echo file_get_contents($GLOBALS['url']."/assets/logo-footer-2.svg"); ?></div>
   <div id="logo-seal"></div>
 </header>
 
 <!-- SVG Text/Copy -->
-<div id="headline-primary"><a href="http://www.ashleyhall.org/" target="_blank" alt="Ashley Hall"><?php echo file_get_contents($GLOBALS['url']."/assets/text-1.svg"); ?></a></div>
-<div id="subhead-primary"><a href="http://www.ashleyhall.org/" target="_blank" alt="Ashley Hall"><?php echo file_get_contents($GLOBALS['url']."/assets/text-4.svg"); ?></a></div>
+<div id="headline-primary"><?php echo file_get_contents($GLOBALS['url']."/assets/text-1.svg"); ?></div>
+<div id="subhead-primary"><?php echo file_get_contents($GLOBALS['url']."/assets/text-4.svg"); ?></div>
 <div id="headline-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-2.svg"); ?></div>
 <div id="subhead-continue"><?php echo file_get_contents($GLOBALS['url']."/assets/text-3.svg"); ?></div>
 
